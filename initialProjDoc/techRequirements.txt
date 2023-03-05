@@ -1,0 +1,6 @@
+The platform we are implementing is a web gui we both have experience with front end web design (HTML, CSS, JavaScript)
+We will be hosting a dynamic website with a server Quinn has experience with backend web development
+We will use node.js mysql
+We are using GitHub to collaborate on the project.
+Quinn will handle the server hosting on Euclayptus
+John will handle the domain 

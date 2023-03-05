@@ -1,0 +1,2 @@
+1. Web based gui 
+2. Search bar that allows title, actor
