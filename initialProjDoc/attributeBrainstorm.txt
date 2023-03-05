@@ -1,0 +1,69 @@
+ENTITIES
+   GENRE 
+      name 
+
+   DIRECTOR 
+      Name
+      DOB
+      AGE (Calculated)?
+
+   ACTORS
+      Name 
+      DOB 
+      AGE (calculated)?
+      Nationality
+
+   Movie
+      length 
+      summary 
+      Title
+      ReleaseDate
+      Language 
+      rating (out of ten)
+      ticket sales?
+      budget
+   
+   SHOW 
+      Name
+      Pilot air date 
+      EpisodeNum
+      SeasonNum
+      End Date
+      Language
+      Budget
+
+   Award
+      Name
+      Year Given
+      AwardType ex:(Emmys, Academy)
+      FestivalAwards ex:(venice film festival, canes, toronto, sundance)
+
+   StreamingService 
+      StreamerName
+      CostPerMonth
+      ect
+
+   ProductionStudio
+      Name
+
+
+RELATIONSHIPS
+   Movie isIn Genre
+      Many to Many
+
+   Movie/Actor/Show Wins Award
+      one to many 
+
+   Movie/Actor/Show NominatedFor Award
+      Many to many
+ 
+   Movie/Show OfferedOn StreamingService
+      Many to Many
+
+   Movie/Show DirectedBy DIRECTOR
+      Many to many
+   Actors ActIn Movie/Show
+      Many to Many 
+   
+   ProductionStudio produces Movie/Show   
+      One to Many
