@@ -62,6 +62,7 @@ RELATIONSHIPS
 
    Movie/Show DirectedBy DIRECTOR
       Many to many
+      
    Actors ActIn Movie/Show
       Many to Many 
    
