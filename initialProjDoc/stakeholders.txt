@@ -1,1 +1,12 @@
-wut
+Describe who you envision as the user(s) of your program and how their use
+of the system might differ:
+
+Potential users: movie critics and casual movie watchers
+
+Movie critics would use the service to find movies and rank/review them.
+
+Casual movie watchers would use the service to find information on movies to
+determine what to watch (i.e. look at reviews to see if they would want to watch the movie).
+
+Both types could use the service to look up technical information on the movie such as
+runtime, length, etc.
