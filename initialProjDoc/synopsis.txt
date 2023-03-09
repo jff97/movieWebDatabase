@@ -1,0 +1,7 @@
+Our database is centered around movies. Movies are directed by directors, produced by production studios, nominated for awards, win awards, acted in by actors, described by a genre. 
+The database will be a web based GUI that users can interact with to get info about specific actors movies and comparisons between tables of the database. 
+Since the GUI is not the main focus all the front end design will be done with plain html css and javascript. 
+The movie table has the most attributes associated with it but the many relationships to it comprise the other informaiton. 
+Movie wins Award is a one to one relationship.
+Production Studio produces movie is a one to many relationship.
+The rest are many to many relationships. 
