@@ -52,7 +52,7 @@ RELATIONSHIPS
       Many to Many
 
    Movie/Actor/Show Wins Award
-      one to many 
+      one to one 
 
    Movie/Actor/Show NominatedFor Award
       Many to many
