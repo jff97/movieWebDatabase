@@ -1,2 +1,24 @@
 1. Web based gui 
-2. Search bar that allows title, actor
+2. Search bar that allows title, actor, genre, etc.
+
+Our database will function by having a search bar that allows a user to look for different movie information. 
+Data will be added and already present when users load up the site. They could potentially delete data or update it (?).
+
+By searching a movie or an actor, attributes and other relationship data will appear based upon what the user wants to see:
+    Group 1 Potential Queries:
+        - Count all movies in the Horror genre:
+            code
+        - List the highest grossing movie from each director
+            code
+    Group 2 Potential Queries:
+        - List the 3 highest rated movies from each actor
+            code
+        - List the actor and directors that both have a movie that has won an award
+            code
+    Group 3 Potential Queries:
+        - List all movies with a budget greater than the director with the highest rated movie
+            code
+        - List all awards that have a movie that was released before the an actor under 30
+            code
+        
+
