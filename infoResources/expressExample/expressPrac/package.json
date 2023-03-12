@@ -1,0 +1,16 @@
+{
+  "name": "express-prac",
+  "version": "1.0.0",
+  "description": "my express server prac",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Quinn M",
+  "license": "ISC",
+  "dependencies": {
+    "err": "^2.1.12",
+    "express": "^4.18.2"
+  }
+}

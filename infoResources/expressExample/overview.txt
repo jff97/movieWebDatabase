@@ -1,0 +1,13 @@
+Overview
+
+Set up:
+ - Install nodejs and express: https://www.youtube.com/watch?v=ZXHU7QnI8Uk
+ - Install express in your project directory
+ - Can use express generator to create a full skeleton application or just create a server.js file and build up 
+   yourself (try out both)
+ - Express Documentation: https://expressjs.com/
+ - to run your instance open a terminal in your project directory and type 'npm start' then go to your browser and
+   type into the url bar 'localhost:3000'
+
+ExpressPrac Directory:
+ - simple hello world program using express that you can mess around with
