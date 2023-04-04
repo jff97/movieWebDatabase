@@ -2,48 +2,48 @@ CREATE DATABASE movieDatabase;
 
 --Tables
 CREATE TABLE Movie (
-    MovieId
-    TicketsSold
-    Rating
-    Language
-    ReleaseDate
-    Title
-    Summary
-    Seconds
-    Budget
+    MovieId INTEGER PRIMARY KEY AUTOINCREMENT,
+    TicketsSold INTEGER NOT NULL,
+    Rating NVARCHAR(5) NOT NULL,
+    Language NVARCHAR(10) NOT NULL,
+    ReleaseDate DATE NOT NULL,
+    Title TEXT NOT NULL,
+    Summary Description NVARCHAR(255) NOT NULL,
+    Seconds INTEGER NOT NULL,
+    Budget INTEGER NOT NULL
 );
 
 CREATE TABLE Director (
-    DirId
-    DirLastName
-    DirFirstName
-    DOB
+    DirId INTEGER PRIMARY KEY AUTOINCREMENT,
+    DirLastName TEXT NOT NULL,
+    DirFirstName TEXT NOT NULL,
+    DOB DATE NOT NULL
 );
 
 CREATE TABLE Award (
-    AwardId
-    AwardTitle
-    AwardType
-    YearGiven
+    AwardId INTEGER PRIMARY KEY AUTOINCREMENT,
+    AwardTitle TEXT NOT NULL,
+    AwardType TEXT NOT NULL,
+    YearGiven YEAR NOT NULL
 );
 
 CREATE TABLE ProductionStudio (
-    StudioId
-    StudioName
+    StudioId INTEGER PRIMARY KEY AUTOINCREMENT,
+    StudioName TEXT NOT NULL
 );
 
 CREATE TABLE Genre (
-    GenreId
-    GenreName
+    GenreId INTEGER PRIMARY KEY AUTOINCREMENT,
+    GenreName TEXT NOT NULL
 );
 
 CREATE TABLE Actor (
-    ActorId
-    Nationality
-    Age
-    DOB
-    FirstName
-    LastName
+    ActorId INTEGER PRIMARY KEY AUTOINCREMENT,
+    Nationality TEXT NOT NULL,
+    Age, --how
+    DOB DATE NOT NULL,
+    FirstName TEXT NOT NULL,
+    LastName TEXT NOT NULL
 );
 
 --Relationships
