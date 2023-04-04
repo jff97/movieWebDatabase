@@ -102,7 +102,13 @@ INSERT INTO ProductionStudio (StudioName) VALUES ('Universal Pictures');
 INSERT INTO ProductionStudio (StudioName) VALUES ('Warner Bros.');
 
 --Genre
-INSERT INTO Genre (GenreName) VALUES
+INSERT INTO Genre (GenreName) VALUES ('Horror');
+INSERT INTO Genre (GenreName) VALUES ('Action');
+INSERT INTO Genre (GenreName) VALUES ('Romance');
+INSERT INTO Genre (GenreName) VALUES ('Comedy');
+INSERT INTO Genre (GenreName) VALUES ('Drama');
+INSERT INTO Genre (GenreName) VALUES ('Fantasy');
+
 
 --Actor
 INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES
