@@ -76,3 +76,28 @@ CREATE TABLE DirectedBy (
     MovieId
     DirId
 );
+
+--Entries--: Regular Tables
+
+--Movies
+INSERT INTO Movie (TicketsSold, Rating, Language, ReleaseDate, Title, Summary, Seconds, Budget) VALUES
+
+--Director
+INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES
+
+--Award
+INSERT INTO Award (AwardTitle, AwardType, YearGiven) VALUES
+
+--Production Studios
+INSERT INTO ProductionStudio (StudioName) VALUES 
+
+--Genre
+INSERT INTO Genre (GenreName) VALUES
+
+--Actor
+INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES
+
+
+--Entries--: Relationship Tables
+
+
