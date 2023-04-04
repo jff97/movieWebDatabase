@@ -1,4 +1,4 @@
-CREATE DATABASE movieDatabase;
+--CREATE DATABASE movieDatabase;
 
 DROP TABLE IF EXISTS [Movie];
 DROP TABLE IF EXISTS [Director];
@@ -6,8 +6,14 @@ DROP TABLE IF EXISTS [Award];
 DROP TABLE IF EXISTS [ProductionStudio];
 DROP TABLE IF EXISTS [Genre];
 DROP TABLE IF EXISTS [Actor];
+DROP TABLE IF EXISTS [NominatedFor];
+DROP TABLE IF EXISTS [Wins];
+DROP TABLE IF EXISTS [Produces];
+DROP TABLE IF EXISTS [ActsIn];
+DROP TABLE IF EXISTS [Describes];
+DROP TABLE IF EXISTS [DirectedBy];
 
---Tables
+--Tables --> add in foreign keys to regular tables
 CREATE TABLE Movie (
     MovieId INTEGER PRIMARY KEY AUTOINCREMENT,
     TicketsSold INTEGER NOT NULL,
@@ -46,48 +52,64 @@ CREATE TABLE Genre (
 CREATE TABLE Actor (
     ActorId INTEGER PRIMARY KEY AUTOINCREMENT,
     Nationality TEXT NOT NULL,
-    Age, --how
+    Age, --how to calc  💭
     DOB DATE NOT NULL,
     FirstName TEXT NOT NULL,
     LastName TEXT NOT NULL
 );
 
---Relationships
+--Relationships --> correct??????
 CREATE TABLE NominatedFor (
+    MovieId INTEGER NOT NULL, 
+    AwardId INTEGER NOT NULL,
     CONSTRAINT fk_award_nominatedfor FOREIGN KEY (AwardId) REFERENCES Award(AwardId),
     CONSTRAINT fk_movie_nominatedfor FOREIGN KEY (MovieId) REFERENCES Movie(MovieId)
 );
 
 CREATE TABLE Wins (
+    MovieId INTEGER NOT NULL, 
+    AwardId INTEGER NOT NULL,
+    YearGiven YEAR NOT NULL,
     CONSTRAINT fk_award_wins FOREIGN KEY (AwardId) REFERENCES Award(AwardId),
-    CONSTRAINT fk_movie_wins FOREIGN KEY (MovieId) REFERENCES Movie(MovieId),
-    YearGiven YEAR NOT NULL
+    CONSTRAINT fk_movie_wins FOREIGN KEY (MovieId) REFERENCES Movie(MovieId)
 );
 
 CREATE TABLE Produces (
+    MovieId INTEGER NOT NULL, 
+    StudioId INTEGER NOT NULL,
     CONSTRAINT fk_productionstudio_produces FOREIGN KEY (StudioId) REFERENCES ProductionStudio(StudioId),
     CONSTRAINT fk_movie_produces FOREIGN KEY (MovieId) REFERENCES Movie(MovieId)
 );
 
 CREATE TABLE ActsIn (
+    MovieId INTEGER NOT NULL, 
+    ActorId INTEGER NOT NULL, 
     CONSTRAINT fk_actor_actsin FOREIGN KEY (ActorId) REFERENCES Actor(ActorId),
     CONSTRAINT fk_movie_actsin FOREIGN KEY (MovieId) REFERENCES Movie(MovieId)
 );
 
 CREATE TABLE Describes (
+    MovieId INTEGER NOT NULL, 
+    GenreId INTEGER NOT NULL,
     CONSTRAINT fk_genre_describes FOREIGN KEY (GenreId) REFERENCES Genre(GenreId),
     CONSTRAINT fk_movie_describes FOREIGN KEY (MovieId) REFERENCES Movie(MovieId)
 ); 
 
 CREATE TABLE DirectedBy (
+    MovieId INTEGER NOT NULL, 
+    DirId INTEGER NOT NULL,
     CONSTRAINT fk_movie_directedby FOREIGN KEY (MovieId) REFERENCES Movie(MovieId),
-    CONSTRAINT fk_director_directedby FOREIGN KEY (DirId) REFERENCES Director(DirId),
+    CONSTRAINT fk_director_directedby FOREIGN KEY (DirId) REFERENCES Director(DirId)
 );
 
 --Entries--: Regular Tables
 
 --Movies
-INSERT INTO Movie (TicketsSold, Rating, Language, ReleaseDate, Title, Summary, Seconds, Budget) VALUES
+INSERT INTO Movie (TicketsSold, Rating, Language, ReleaseDate, Title, Summary, Seconds, Budget) VALUES (135728167, 'R', 'English', 2022/04/08, 
+'Everything Everywhere All At Once', 'A middle-aged Chinese immigrant is swept up into an insane adventure in which she alone can save existence by exploring other universes and connecting with the lives she could have led.',
+8340, 14300000);
+
+
 
 --Director
 INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Nolan', 'Christopher', 1970/07/30);
@@ -118,9 +140,9 @@ INSERT INTO Genre (GenreName) VALUES ('Fantasy');
 
 
 --Actor
-INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES
+--INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES
 
 
---Entries--: Relationship Tables
+--Entries--: Relationship Tables??????????
 
 
