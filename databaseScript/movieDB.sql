@@ -83,7 +83,10 @@ CREATE TABLE DirectedBy (
 INSERT INTO Movie (TicketsSold, Rating, Language, ReleaseDate, Title, Summary, Seconds, Budget) VALUES
 
 --Director
-INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES
+INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Nolan', 'Christopher', 1970/07/30);
+INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Fincher', 'David', 1962/08/28);
+INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Gerwig', 'Greta', 1983/08/04);
+INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Peele', 'Jordan', 1979/02/21);
 
 --Award
 INSERT INTO Award (AwardTitle, AwardType, YearGiven) VALUES
