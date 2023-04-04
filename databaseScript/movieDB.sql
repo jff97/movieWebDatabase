@@ -89,7 +89,11 @@ INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES
 INSERT INTO Award (AwardTitle, AwardType, YearGiven) VALUES
 
 --Production Studios
-INSERT INTO ProductionStudio (StudioName) VALUES 
+INSERT INTO ProductionStudio (StudioName) VALUES ('A24');
+INSERT INTO ProductionStudio (StudioName) VALUES ('Monkeypaw Productions');
+INSERT INTO ProductionStudio (StudioName) VALUES ('Marvel Studios');
+INSERT INTO ProductionStudio (StudioName) VALUES ('Universal Pictures');
+INSERT INTO ProductionStudio (StudioName) VALUES ('Warner Bros.');
 
 --Genre
 INSERT INTO Genre (GenreName) VALUES
