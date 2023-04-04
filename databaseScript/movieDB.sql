@@ -47,34 +47,34 @@ CREATE TABLE Actor (
 
 --Relationships
 CREATE TABLE NominatedFor (
-    AwardId
-    MovieId
+    CONSTRAINT fk_award_nominatedfor FOREIGN KEY (AwardId) REFERENCES Award(AwardId),
+    CONSTRAINT fk_movie_nominatedfor FOREIGN KEY (MovieId) REFERENCES Movie(MovieId)
 );
 
 CREATE TABLE Wins (
-    AwardId
-    MovieId
-    YearGiven
+    CONSTRAINT fk_award_wins FOREIGN KEY (AwardId) REFERENCES Award(AwardId),
+    CONSTRAINT fk_movie_wins FOREIGN KEY (MovieId) REFERENCES Movie(MovieId),
+    YearGiven YEAR NOT NULL
 );
 
 CREATE TABLE Produces (
-    StudioId
-    MovieId
+    CONSTRAINT fk_productionstudio_produces FOREIGN KEY (StudioId) REFERENCES ProductionStudio(StudioId),
+    CONSTRAINT fk_movie_produces FOREIGN KEY (MovieId) REFERENCES Movie(MovieId)
 );
 
 CREATE TABLE ActsIn (
-    ActorId
-    MovieId
+    CONSTRAINT fk_actor_actsin FOREIGN KEY (ActorId) REFERENCES Actor(ActorId),
+    CONSTRAINT fk_movie_actsin FOREIGN KEY (MovieId) REFERENCES Movie(MovieId)
 );
 
 CREATE TABLE Describes (
-    GenreId
-    MovieId
+    CONSTRAINT fk_genre_describes FOREIGN KEY (GenreId) REFERENCES Genre(GenreId),
+    CONSTRAINT fk_movie_describes FOREIGN KEY (MovieId) REFERENCES Movie(MovieId)
 ); 
 
 CREATE TABLE DirectedBy (
-    MovieId
-    DirId
+    CONSTRAINT fk_movie_directedby FOREIGN KEY (MovieId) REFERENCES Movie(MovieId),
+    CONSTRAINT fk_director_directedby FOREIGN KEY (DirId) REFERENCES Director(DirId),
 );
 
 --Entries--: Regular Tables
