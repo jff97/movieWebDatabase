@@ -23,8 +23,7 @@ CREATE TABLE Director (
 CREATE TABLE Award (
     AwardId INTEGER PRIMARY KEY AUTOINCREMENT,
     AwardTitle TEXT NOT NULL,
-    AwardType TEXT NOT NULL,
-    YearGiven YEAR NOT NULL
+    AwardType TEXT NOT NULL
 );
 
 CREATE TABLE ProductionStudio (
@@ -55,6 +54,7 @@ CREATE TABLE NominatedFor (
 CREATE TABLE Wins (
     AwardId
     MovieId
+    YearGiven
 );
 
 CREATE TABLE Produces (
@@ -89,7 +89,10 @@ INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Gerwig', 'Greta',
 INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Peele', 'Jordan', 1979/02/21);
 
 --Award
-INSERT INTO Award (AwardTitle, AwardType, YearGiven) VALUES
+INSERT INTO Award (AwardTitle, AwardType) VALUES ('Best Picture', 'Academy Award');
+INSERT INTO Award (AwardTitle, AwardType) VALUES ('Best Film', 'British Academy Film Awards');
+INSERT INTO Award (AwardTitle, AwardType) VALUES ('Golden Lion', 'Venice Film Festival');
+INSERT INTO Award (AwardTitle, AwardType) VALUES ('Palme dOr', 'Cannes Film Festival');
 
 --Production Studios
 INSERT INTO ProductionStudio (StudioName) VALUES ('A24');
