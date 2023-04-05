@@ -1,4 +1,11 @@
---CREATE DATABASE movieDatabase;
+/******************************************************
+* Movie Database Script
+* Version: 1.0
+* Description: This script creates the database and tables
+*              for a movie database application.
+* Author: Quinn McClure & John Fox
+* Date: 4/04/2023
+******************************************************/
 
 DROP TABLE IF EXISTS [Movie];
 DROP TABLE IF EXISTS [Director];
