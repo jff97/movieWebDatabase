@@ -116,6 +116,14 @@ INSERT INTO Movie (TicketsSold, Rating, Language, ReleaseDate, Title, Summary, S
 'Everything Everywhere All At Once', 'A middle-aged Chinese immigrant is swept up into an insane adventure in which she alone can save existence by exploring other universes and connecting with the lives she could have led.',
 8340, 14300000);
 
+INSERT INTO Movie (TicketsSold, Rating, Language, ReleaseDate, Title, Summary, Seconds, Budget) VALUES (22957625, 'R', 'English', 2021/10/29, 
+'Last Night in Soho', 'A young fashion student who becomes mysteriously transported to the 1960s and befriends her idol, but soon discovers the dark and dangerous secrets of the past.',
+6960, 43000000);
+
+INSERT INTO Movie (TicketsSold, Rating, Language, ReleaseDate, Title, Summary, Seconds, Budget) VALUES (32052925, 'R', 'English', 1960/09/08, 
+'Psycho', 'A Phoenix secretary embezzles $40,000 from her employers client, goes on the run and checks into a remote motel run by a young man under the domination of his mother',
+69540, 806947);
+
 
 
 --Director
