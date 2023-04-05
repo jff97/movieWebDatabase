@@ -59,7 +59,7 @@ CREATE TABLE Genre (
 CREATE TABLE Actor (
     ActorId INTEGER PRIMARY KEY AUTOINCREMENT,
     Nationality TEXT NOT NULL,
-    Age, --how to calc  💭
+    Age INTEGER NOT NULL, --how to calc  💭
     DOB DATE NOT NULL,
     FirstName TEXT NOT NULL,
     LastName TEXT NOT NULL
@@ -147,7 +147,11 @@ INSERT INTO Genre (GenreName) VALUES ('Fantasy');
 
 
 --Actor
---INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES
+INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('British', '49', 1974/01/30, 'Christian', 'Bale');
+INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('Vietnamese', '51', 1971/08/20, 'Ke Huy', 'Quan');
+INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('American', '26', 1996/04/16, 'Anya', 'Taylor-Joy');
+INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('Australian', '22', 2000/07/26, 'Thomasin', 'McKenzie');
+INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('Australian', '22', 2000/07/26, 'Thomasin', 'McKenzie');
 
 
 --Entries--: Relationship Tables??????????
