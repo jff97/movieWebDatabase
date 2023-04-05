@@ -153,6 +153,7 @@ INSERT INTO Genre (GenreName) VALUES ('Romance');
 INSERT INTO Genre (GenreName) VALUES ('Comedy');
 INSERT INTO Genre (GenreName) VALUES ('Drama');
 INSERT INTO Genre (GenreName) VALUES ('Fantasy');
+INSERT INTO Genre (GenreName) VALUES ('Sci-Fi');
 
 
 --Actor
@@ -173,7 +174,7 @@ INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('Australi
 --ActsIn
 
 --Describes
-INSERT INTO Describes (MovieId, GenreId) VALUES (1, 1);
+INSERT INTO Describes (MovieId, GenreId) VALUES (1, 7);
 
 --DirectedBy
 
