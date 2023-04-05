@@ -131,6 +131,7 @@ INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Nolan', 'Christop
 INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Fincher', 'David', 1962/08/28);
 INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Gerwig', 'Greta', 1983/08/04);
 INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Peele', 'Jordan', 1979/02/21);
+INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Hitchcock', 'Alfred', 1899/08/13);
 
 --Award
 INSERT INTO Award (AwardTitle, AwardType) VALUES ('Best Picture', 'Academy Award');
@@ -158,7 +159,6 @@ INSERT INTO Genre (GenreName) VALUES ('Fantasy');
 INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('British', '49', 1974/01/30, 'Christian', 'Bale');
 INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('Vietnamese', '51', 1971/08/20, 'Ke Huy', 'Quan');
 INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('American', '26', 1996/04/16, 'Anya', 'Taylor-Joy');
-INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('Australian', '22', 2000/07/26, 'Thomasin', 'McKenzie');
 INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('Australian', '22', 2000/07/26, 'Thomasin', 'McKenzie');
 
 
