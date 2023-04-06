@@ -166,16 +166,16 @@ INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('Australi
 --Entries--: Relationship Tables??????????
 
 --NominatedFor
-INSERT INTO Produces (MovieId, AwardId) VALUES
+INSERT INTO NominatedFor (MovieId, AwardId) VALUES (1, 1);
 
 --Wins
-INSERT INTO Produces (MovieId, AwardId) VALUES
+INSERT INTO Wins (MovieId, AwardId, YearGiven) VALUES (1, 1, 2022);
 
 --Produces
-INSERT INTO Produces (MovieId, StudioId) VALUES
+INSERT INTO Produces (MovieId, StudioId) VALUES (1, 1);
 
 --ActsIn
-INSERT INTO Produces (MovieId, ActorId) VALUES
+INSERT INTO ActsIn (MovieId, ActorId) VALUES (1, 2);
 
 --Describes
 INSERT INTO Describes (MovieId, GenreId) VALUES (1, 7);
@@ -183,6 +183,6 @@ INSERT INTO Describes (MovieId, GenreId) VALUES (2, 1);
 INSERT INTO Describes (MovieId, GenreId) VALUES (3, 1);
 
 --DirectedBy
-INSERT INTO Produces (MovieId, DirId) VALUES
+INSERT INTO DirectedBy (MovieId, DirId) VALUES (3, 5);
 
 
