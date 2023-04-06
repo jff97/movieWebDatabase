@@ -1,12 +1,32 @@
-const db = require('../db/db');
+var express = require('express');
+const db = require('../db/db.js');
 
-function getAllMovies(req, res, next) {
-    const allMovies = db.raw('SELECT * FROM Movie');
-
+async function getAllMovies(req, res, next) {
+    const allMovies = db.raw('SELECT * FROM Movie')
+    .catch((err) => {
+        err.status = 400;
+        error.message = "Failed to fetch users";
+        next(err);
+    });
+    
     res.json(allMovies);
-    console.log(allMovies);
+    //req.body(allMovies)
+    //console.log(allMovies);
+
+    allMovies.then(function(result) {
+        console.log(result);
+        //res.json(allMovies);
+    });
+    //console.log(req);
+}
+
+function test (req, res, next) {
+    res.json('index', { title: 'Express' });
+    console.log("hello");
+
+    
 }
 
 module.exports = {
-    getAllMovies
+    getAllMovies, test
 };
