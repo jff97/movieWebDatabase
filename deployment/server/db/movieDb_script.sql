@@ -163,7 +163,7 @@ INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('American
 INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('Australian', '22', 2000/07/26, 'Thomasin', 'McKenzie');
 
 
---Entries--: Relationship Tables??????????
+--Entries--: Relationship Tables
 
 --NominatedFor
 INSERT INTO NominatedFor (MovieId, AwardId) VALUES (1, 1);
