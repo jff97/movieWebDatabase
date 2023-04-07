@@ -1,5 +1,7 @@
 var express = require('express');
+var bodyParser = require("body-parser");
 const db = require('../db/db.js');
+
 
 async function getAllMovies(req, res, next) {
     const allMovies = db.raw('SELECT * FROM Movie')
@@ -10,14 +12,10 @@ async function getAllMovies(req, res, next) {
     });
     
     res.json(allMovies);
-    //req.body(allMovies)
-    //console.log(allMovies);
 
     allMovies.then(function(result) {
         console.log(result);
-        //res.json(allMovies);
     });
-    //console.log(req);
 }
 
 function test (req, res, next) {
