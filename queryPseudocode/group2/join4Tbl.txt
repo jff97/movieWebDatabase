@@ -1,4 +1,14 @@
 find all actor that acted in moveies of x production studio 
-
 this satifies group 2 requirement by joining 4 or more tables 
 
+
+
+given input X for actor name or something related to actor
+
+SELECT Actor.FirstName, Actor.LastName, Actor.DOB, Actor.Nationality
+FROM Actor JOIN ActsIn JOIN Movie JOIN Produces JOIN ProductionStudio
+ON Actor.ActorId = ActsIn.ActorId AND 
+   ActsIn.MovieId = Movie.MovieId AND
+   Movie.MovieId = Produces.MovieId AND
+   Produces.StudioId = ProductionStudio.StudioId
+WHERE X = Actor.FirstName
