@@ -122,7 +122,8 @@ INSERT INTO Movie (TicketsSold, Rating, Language, ReleaseDate, Title, Summary, S
 
 INSERT INTO Movie (TicketsSold, Rating, Language, ReleaseDate, Title, Summary, Seconds, Budget) VALUES (32052925, 'R', 'English', 1960/09/08, 
 'Psycho', 'A Phoenix secretary embezzles $40,000 from her employers client, goes on the run and checks into a remote motel run by a young man under the domination of his mother',
-69540, 806947);
+6540, 806947);
+--INSERT INTO Movie (TicketsSold, Rating, Language, ReleaseDate, Title, Summary, Seconds, Budget) VALUES (todoTickets, 'PG', 'English', 2023/04/05, 'The Super Mario Bros. Movie', 'The story of The Super Mario Bros. on their journey through the Mushroom Kingdom.', 5520, 100000000);
 
 
 
@@ -132,6 +133,10 @@ INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Fincher', 'David'
 INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Gerwig', 'Greta', 1983/08/04);
 INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Peele', 'Jordan', 1979/02/21);
 INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Hitchcock', 'Alfred', 1899/08/13);
+--INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Horvath', 'Aaron', 1980/08/19);
+--INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Jelenic', 'Michael', 1977/05/12);
+--INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Horvath', 'Aaron', 1980/08/19);
+
 
 --Award
 INSERT INTO Award (AwardTitle, AwardType) VALUES ('Best Picture', 'Academy Award');
@@ -145,6 +150,7 @@ INSERT INTO ProductionStudio (StudioName) VALUES ('Monkeypaw Productions');
 INSERT INTO ProductionStudio (StudioName) VALUES ('Marvel Studios');
 INSERT INTO ProductionStudio (StudioName) VALUES ('Universal Pictures');
 INSERT INTO ProductionStudio (StudioName) VALUES ('Warner Bros.');
+INSERT INTO ProductionStudio (StudioName) VALUES ('Nintendo');
 
 --Genre
 INSERT INTO Genre (GenreName) VALUES ('Horror');
@@ -154,6 +160,8 @@ INSERT INTO Genre (GenreName) VALUES ('Comedy');
 INSERT INTO Genre (GenreName) VALUES ('Drama');
 INSERT INTO Genre (GenreName) VALUES ('Fantasy');
 INSERT INTO Genre (GenreName) VALUES ('Sci-Fi');
+INSERT INTO Genre (GenreName) VALUES ('Family');
+INSERT INTO Genre (GenreName) VALUES ('Animation');
 
 
 --Actor
@@ -161,6 +169,10 @@ INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('British'
 INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('Vietnamese', '51', 1971/08/20, 'Ke Huy', 'Quan');
 INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('American', '26', 1996/04/16, 'Anya', 'Taylor-Joy');
 INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('Australian', '22', 2000/07/26, 'Thomasin', 'McKenzie');
+--INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('American', '43', 1979/06/21, 'Pratt', 'Chris');
+--INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('Argentine', '26', 1996/04/16, 'Taylor-Joy', 'Anya');
+--INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('American', '26', 1975/02/09, 'Day', 'Charlie');
+--INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('American', '53', 1969/08/28, 'Black', 'Jack');
 
 
 --Entries--: Relationship Tables
@@ -173,16 +185,27 @@ INSERT INTO Wins (MovieId, AwardId, YearGiven) VALUES (1, 1, 2022);
 
 --Produces
 INSERT INTO Produces (MovieId, StudioId) VALUES (1, 1);
+--INSERT INTO Produces (MovieId, StudioId) VALUES (4, 6);
 
 --ActsIn
 INSERT INTO ActsIn (MovieId, ActorId) VALUES (1, 2);
+--INSERT INTO ActsIn (MovieId, ActorId) VALUES (4, 5);
+--INSERT INTO ActsIn (MovieId, ActorId) VALUES (4, 6);
+--INSERT INTO ActsIn (MovieId, ActorId) VALUES (4, 7);
+--INSERT INTO ActsIn (MovieId, ActorId) VALUES (4, 8);
 
 --Describes
 INSERT INTO Describes (MovieId, GenreId) VALUES (1, 7);
 INSERT INTO Describes (MovieId, GenreId) VALUES (2, 1);
 INSERT INTO Describes (MovieId, GenreId) VALUES (3, 1);
+--INSERT INTO Describes (MovieId, GenreId) VALUES (4, 4);
+--INSERT INTO Describes (MovieId, GenreId) VALUES (4, 7);
+--INSERT INTO Describes (MovieId, GenreId) VALUES (4, 8);
+--INSERT INTO Describes (MovieId, GenreId) VALUES (4, 9);
+--INSERT INTO Describes (MovieId, GenreId) VALUES (4, 3);
 
 --DirectedBy
 INSERT INTO DirectedBy (MovieId, DirId) VALUES (3, 5);
-
-
+--INSERT INTO DirectedBy (MovieId, DirId) VALUES (4, 6);
+--INSERT INTO DirectedBy (MovieId, DirId) VALUES (4, 7);
+--INSERT INTO DirectedBy (MovieId, DirId) VALUES (4, 8);

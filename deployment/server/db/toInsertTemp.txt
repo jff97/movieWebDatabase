@@ -1,0 +1,53 @@
+-- Entries for Movie 1
+INSERT INTO Movie (TicketsSold, Rating, Language, ReleaseDate, Title, Summary, Seconds, Budget)
+VALUES (87654000, 'PG-13', 'English', '2023/01/01', 'The Avengers: Secret Invasion',
+'When a new alien threat emerges on Earth, the Avengers must band together once again to save the planet from destruction', 7920, 250000000);
+
+INSERT INTO Director (DirLastName, DirFirstName, DOB)
+VALUES ('Russo', 'Anthony', '1970/02/03');
+
+INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName)
+VALUES ('American', 44, '1979/11/12', 'Scarlett', 'Johansson');
+
+INSERT INTO Genre (GenreName) VALUES ('Action'), ('Adventure'), ('Fantasy');
+
+INSERT INTO ProductionStudio (StudioName) VALUES ('Marvel Studios');
+
+INSERT INTO NominatedFor (MovieId, AwardId) VALUES (3, 2);
+
+INSERT INTO Wins (MovieId, AwardId, YearGiven) VALUES (3, 5, 2024);
+
+INSERT INTO Produces (MovieId, StudioId) VALUES (3, 1);
+
+INSERT INTO ActsIn (MovieId, ActorId) VALUES (3, 4), (3, 6);
+
+INSERT INTO Describes (MovieId, GenreId) VALUES (3, 1), (3, 2), (3, 3);
+
+INSERT INTO DirectedBy (MovieId, DirId) VALUES (3, 1);
+
+-- Entries for Movie 2
+INSERT INTO Movie (TicketsSold, Rating, Language, ReleaseDate, Title, Summary, Seconds, Budget)
+VALUES (23451200, 'R', 'English', '2023/06/01', 'The Dark Knight Returns',
+'In a dystopian future, an aging Bruce Wayne comes out of retirement to don the mantle of Batman once more and protect Gotham City from a new gang of criminals', 8400, 80000000);
+
+INSERT INTO Director (DirLastName, DirFirstName, DOB)
+VALUES ('Snyder', 'Zack', '1966/03/01');
+
+INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName)
+VALUES ('American', 50, '1972/03/27', 'Ben', 'Affleck'), ('Australian', 31, '1991/12/07', 'Dacre', 'Montgomery');
+
+INSERT INTO Genre (GenreName) VALUES ('Action'), ('Drama'), ('Science Fiction');
+
+INSERT INTO ProductionStudio (StudioName) VALUES ('DC Films');
+
+INSERT INTO NominatedFor (MovieId, AwardId) VALUES (4, 3), (4, 7);
+
+INSERT INTO Wins (MovieId, AwardId, YearGiven) VALUES (4, 10, 2024);
+
+INSERT INTO Produces (MovieId, StudioId) VALUES (4, 2);
+
+INSERT INTO ActsIn (MovieId, ActorId) VALUES (4, 5), (4, 7);
+
+INSERT INTO Describes (MovieId, GenreId) VALUES (4, 1), (4, 2), (4, 3);
+
+INSERT INTO DirectedBy (MovieId, DirId) VALUES (4, 2);
