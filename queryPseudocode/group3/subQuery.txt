@@ -1,6 +1,6 @@
 find the names of the actors who have appeared in the most number of movies along with the count of movies they have acted in.
 
-this satisfies group 3 by using a querry inside a querry inside a querry
+this satisfies group 3 by using a query inside a query inside a query
 
 SELECT Actor.FirstName, Actor.LastName, COUNT(*) AS MovieCount
 FROM Actor JOIN ActsIn 
