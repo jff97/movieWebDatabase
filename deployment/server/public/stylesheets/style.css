@@ -11,3 +11,17 @@ a {
   outline: solid black 3px;
   padding: 10px
 }
+.queryBox {
+  width: 100%;
+  background-color: red;
+  border: 2px solid blanchedalmond;
+  box-sizing: border-box;
+}
+
+.queryOutput {
+  width: 90%;
+  margin-left: 5%;
+  background-color: purple;
+  /*TODO Delete this height attribute just for visualization*/
+  height: 50vh;
+}

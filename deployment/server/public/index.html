@@ -18,6 +18,71 @@
            <span class="navbar-brand mb-0 h1">Movie Database by Quinn McClure and John Fox</span>
          </div>
       </nav>
+      <div id="queryContainer">
+         <div class="queryBox">
+            <h3>
+               Average age of actors in 
+               <input type="text" id="q1Input" placeholder="Movie Title">
+               <button onclick="alert('js function that outputs query 1 results in purple box')">Run Query</button>
+            </h3>
+            <div class="queryOutput">
+               Output Will go here
+            </div>
+         </div>
+         <div class="queryBox">
+            <h3>Movies between 
+               <input type="text" id="q2Year1Input" placeholder="year 1"> 
+               and 
+               <input type="text" id="q2Year2Input" placeholder="year 2"> 
+               <button onclick="alert('js function that outputs query 2 results in purple box')">Run Query</button>
+            </h3>
+            <div class="queryOutput">
+               Output Will go here
+            </div>
+         </div>
+
+         <div class="queryBox">
+            <h3>
+               Find all actors who acted in 
+               <input type="text" id="q3Input" placeholder="production studio"> 
+               <button onclick="alert('js function that outputs query 3 results in purple box')">Run Query</button>
+            </h3>
+            <div class="queryOutput">
+               Output Will go here
+            </div>
+         </div>
+         <div class="queryBox">
+            <h3>find the top 
+               <input type="text" id="q4StartInput" placeholder="Start Range">
+               to 
+               <input type="text" id="q4EndInput" placeholder="End range">
+               most popular genres by ticket sales
+               <button onclick="alert('js function that outputs query 4 results in purple box')">Run Query</button>
+            </h3>
+            <div class="queryOutput">
+               Output Will go here
+            </div>
+         </div>
+
+         <div class="queryBox">
+            <h3>
+               Unwritten Query here
+               <button onclick="alert('js function that outputs query 5 results in purple box')">Run Query</button>
+            </h3>
+            <div class="queryOutput">
+               Output Will go here
+            </div>
+         </div>
+         <div class="queryBox">
+            <h3>
+               Find the names of the actors who have appeared in the most number of movies along with the count of movies they have acted in.
+               <button onclick="alert('js function that outputs query 6 results in purple box')">Run Query</button>
+            </h3>
+            <div class="queryOutput">
+               Output Will go here
+            </div>
+         </div>
+      </div>
       <!-- <div class="input-group mb-3">
          <input type="text" class="form-control" placeholder="Input a query" aria-label="Query" aria-describedby="button-addon2">
          <button class="btn btn-outline-secondary" type="button" id="button-query" form = "Query" onclick=getQueryResult()>Button</button>
