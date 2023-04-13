@@ -1,4 +1,4 @@
-document.getElementById('submitButton').addEventListener('click', function() {
+document.getElementById('submitButton').addEventListener('click', async function() {
     //get input
     var sql = document.getElementById('sqlInput').value;
 
@@ -8,7 +8,7 @@ document.getElementById('submitButton').addEventListener('click', function() {
     };
 
     //send HTTP request to the backend
-    fetch('/', {
+    fetch('/?', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

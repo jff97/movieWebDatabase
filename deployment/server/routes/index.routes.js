@@ -8,8 +8,7 @@ const { getAllMovies, test } = require('../controllers/index.controller.js');
 router.use(bodyParser.json());
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.json('index', { title: 'Express' });
+router.get('/?', function(req, res, next) {
   console.log('hello');
 });
 
