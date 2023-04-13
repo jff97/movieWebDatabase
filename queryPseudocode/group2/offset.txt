@@ -1,0 +1,11 @@
+find the top x1 to x2 most popular genres by ticket sales  where x1 < x2
+
+this could satisfy aggregate functions or group by or limit or offset
+
+SELECT GenreName, SUM(TicketsSold) AS TotalTicketSales 
+FROM Genre JOIN Describes 
+ON Genre.GenreId = Describes.GenreId 
+GROUP BY Genre.GenreId
+ORDER BY TotalTicketSales DESC
+LIMIT x2 - x1
+OFFSET x1

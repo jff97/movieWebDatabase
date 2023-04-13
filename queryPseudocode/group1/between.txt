@@ -1,0 +1,8 @@
+find all the movies between years y1 and y2 and order them by title alphabetically
+
+this satisfied group 1
+
+SELECT *
+FROM Movies 
+WHERE ReleaseDate(take just year) BETWEEN y1 AND y2
+ORDER BY Movies.Title ASC
