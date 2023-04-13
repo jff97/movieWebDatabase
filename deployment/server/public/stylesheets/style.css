@@ -6,3 +6,8 @@ body {
 a {
   color: #00B7FF;
 }
+
+#result {
+  outline: solid black 3px;
+  padding: 10px
+}
