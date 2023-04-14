@@ -24,10 +24,6 @@ app.post('/data', (req, res) => {
 
 app.use('/', indexRouter);
 
-// app.get('/movies', (req, res) => {
-//   res.send('Hello World!');
-// })
-
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
@@ -43,9 +39,5 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.json({ error: err });
 });
-
-// app.listen(3000, () => {
-//   console.log(`Example app listening on port 3000`);
-// });
 
 module.exports = app;
