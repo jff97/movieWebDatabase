@@ -8,23 +8,30 @@ const { getAllMovies, test } = require('../controllers/index.controller.js');
 router.use(bodyParser.json());
 
 /* GET home page. */
-router.get('/?', function(req, res, next) {
+router.get('/', function(req, res, next) {
   console.log('hello');
 });
 
-router.post('/', async function(req, res) {
-  const { sql } = req.body;
+router.post('/api', async function(req, res) {
+  try {
+    const { sql } = req.body;
 
-  //process the data
-  const query = db.raw(sql);
+    //process the data
+    const query = db.raw(sql);
 
-  //prep response data
-  const responseData = {
-    result: query,
-    message: 'Processed successfully'
-  };
+    //prep response data
+    const responseData = {
+      result: query,
+      message: 'Processed successfully'
+    };
 
-  res.json(responseData);
+    res.json(responseData);
+  } catch (err) {
+    //handle the error
+    console.error(err);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+  
 });
 
 router.get('/movies', getAllMovies);

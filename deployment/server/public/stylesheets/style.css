@@ -7,7 +7,7 @@ a {
   color: #00B7FF;
 }
 
-#result {
+#output {
   outline: solid black 3px;
   padding: 10px
 }

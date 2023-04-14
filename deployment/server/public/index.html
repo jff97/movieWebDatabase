@@ -25,7 +25,7 @@
                <input type="text" id="q1Input" placeholder="Movie Title">
                <button onclick="alert('js function that outputs query 1 results in purple box')">Run Query</button>
             </h3>
-            <div class="queryOutput">
+            <div class="queryOutput" id = "avgActorsQuery">
                Output Will go here
             </div>
          </div>
@@ -36,7 +36,7 @@
                <input type="text" id="q2Year2Input" placeholder="year 2"> 
                <button onclick="alert('js function that outputs query 2 results in purple box')">Run Query</button>
             </h3>
-            <div class="queryOutput">
+            <div class="queryOutput" id = "betweenYrsQuery">
                Output Will go here
             </div>
          </div>
@@ -47,7 +47,7 @@
                <input type="text" id="q3Input" placeholder="production studio"> 
                <button onclick="alert('js function that outputs query 3 results in purple box')">Run Query</button>
             </h3>
-            <div class="queryOutput">
+            <div class="queryOutput" id = "prodStudioActorsQuery">
                Output Will go here
             </div>
          </div>
@@ -59,7 +59,7 @@
                most popular genres by ticket sales
                <button onclick="alert('js function that outputs query 4 results in purple box')">Run Query</button>
             </h3>
-            <div class="queryOutput">
+            <div class="queryOutput" id = "popTixSalesQuery">
                Output Will go here
             </div>
          </div>
@@ -95,6 +95,8 @@
          <input type="text" id="sqlInput" placeholder="Enter text">
          <button type="submit" id="submitButton">Submit</button>
        </form>
+       <p>Result:</p>
+       <br>
        <div id="output"></div>
    </body>
 </html>

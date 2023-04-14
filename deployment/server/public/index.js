@@ -1,6 +1,6 @@
 document.getElementById('submitButton').addEventListener('click', async function() {
     //get input
-    var sql = document.getElementById('sqlInput').value;
+    var sqlVal = document.getElementById('sqlInput').value;
 
     //create data object
     var inputData = {
@@ -8,17 +8,23 @@ document.getElementById('submitButton').addEventListener('click', async function
     };
 
     //send HTTP request to the backend
-    fetch('/?', {
+    fetch('/api', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(inputData)
+        body: JSON.stringify({sql: sqlVal})
     })
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
     .then(responseData => {
         //handle res data
-        console.log(responseData);
+        console.log(responseData.result);
+        console.log(responseData.message);
     })
     .catch(error => {
         console.error('Error:', error);
