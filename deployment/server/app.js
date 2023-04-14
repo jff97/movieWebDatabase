@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var db = require('./db/db.js');
 
 var indexRouter = require('./routes/index.routes.js');
 
@@ -18,6 +19,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.post('/data', (req, res) => {
   const inputData = req.body.data; //data from the request body
   //process the data (db code)
+  // const allMovies = db.raw('SELECT * FROM Movie');
   const outputData = `Processed data: ${inputData}`;
   res.send(outputData); //send as response
 });
