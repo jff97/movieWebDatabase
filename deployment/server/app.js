@@ -15,6 +15,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.post('/data', (req, res) => {
+  const inputData = req.body.data; //data from the request body
+  //process the data (db code)
+  const outputData = `Processed data: ${inputData}`;
+  res.send(outputData); //send as response
+});
+
 app.use('/', indexRouter);
 
 // app.get('/movies', (req, res) => {
