@@ -158,7 +158,13 @@ INSERT INTO Genre (GenreName) VALUES ('Sci-Fi');
 
 --Actor
 INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('British', '49', 1974/01/30, 'Christian', 'Bale');
+
+    --EEAO Actors
 INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('Vietnamese', '51', 1971/08/20, 'Ke Huy', 'Quan');
+INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('American', '64', 1958/11/22, 'Jamie', 'Lee Curtis');
+INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('Malasian', '60', 1962/08/06, 'Michelle', 'Yeoh');
+
+
 INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('American', '26', 1996/04/16, 'Anya', 'Taylor-Joy');
 INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('Australian', '22', 2000/07/26, 'Thomasin', 'McKenzie');
 
@@ -176,6 +182,8 @@ INSERT INTO Produces (MovieId, StudioId) VALUES (1, 1);
 
 --ActsIn
 INSERT INTO ActsIn (MovieId, ActorId) VALUES (1, 2);
+INSERT INTO ActsIn (MovieId, ActorId) VALUES (1, 3);
+INSERT INTO ActsIn (MovieId, ActorId) VALUES (1, 4);
 
 --Describes
 INSERT INTO Describes (MovieId, GenreId) VALUES (1, 7);
