@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var db = require('./db/db.js');
 
 var indexRouter = require('./routes/index.routes.js');
 
@@ -15,11 +16,39 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
+app.post('/data', async (req, res) => {
+  const inputData = req.body.data; //data from the request body
+  //process the data (db code)
+  const query = 'SELECT avg(Actor.Age) FROM Movie JOIN ActsIn JOIN Actor ON Movie.MovieId = ActsIn.MovieId AND ActsIn.ActorId = Actor.ActorId WHERE Movie.Title = ?'
+  try {
+    const avgAge = await db.raw(query, [inputData]); // returns [object Object]
+    console.log(avgAge);
+    const avgAgeString = JSON.stringify(avgAge);
+    const outputData = `Processed data: ${avgAgeString}`;
+    res.send(outputData); //send as response
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Internal Server Error'); // handle error response
+  }
+});
 
-// app.get('/movies', (req, res) => {
-//   res.send('Hello World!');
-// })
+app.post('/data', async (req, res) => {
+  const inputData = req.body.data; //data from the request body
+  //process the data (db code)
+  const query = 'SELECT avg(Actor.Age) FROM Movie JOIN ActsIn JOIN Actor ON Movie.MovieId = ActsIn.MovieId AND ActsIn.ActorId = Actor.ActorId WHERE Movie.Title = ?'
+  try {
+    const avgAge = await db.raw(query, [inputData]); // returns [object Object]
+    console.log(avgAge);
+    const avgAgeString = JSON.stringify(avgAge);
+    const outputData = `Processed data: ${avgAgeString}`;
+    res.send(outputData); //send as response
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Internal Server Error'); // handle error response
+  }
+});
+
+app.use('/', indexRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -36,9 +65,5 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.json({ error: err });
 });
-
-// app.listen(3000, () => {
-//   console.log(`Example app listening on port 3000`);
-// });
 
 module.exports = app;
