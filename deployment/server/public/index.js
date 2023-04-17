@@ -25,3 +25,27 @@ q1Button.addEventListener('click', async () => {
         console.error(error);
     }
 });
+
+//code for Query 2
+const q2Button = document.getElementById('q1Button');
+const q2Year1Input = document.getElementById('q2Year1Input');
+const q2Year2Input = document.getElementById('q2Year2Input');
+const q2Output = document.getElementById('q1Output');
+
+q2Button.addEventListener('click', async () => {
+    const data1 = q2Year1Input.value;
+    const data2 = q2Year2Input.value;
+    try {
+        const response = await fetch('/data', {
+            method: 'POST',
+            body: JSON.stringify({ data1, data2 }),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        const result = await response.text();
+        q1Output.textContent = result; //JSON.stringify(result, null, 2);
+    } catch (error) {
+        console.error(error);
+    }
+});
