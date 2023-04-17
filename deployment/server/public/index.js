@@ -1,6 +1,5 @@
 /******************************************************
 * Client-side JS
-* Version: 1.0
 * Author: Quinn McClure & John Fox
 * Date: 4/14/2023
 ******************************************************/
@@ -21,7 +20,7 @@ q1Button.addEventListener('click', async () => {
             }
         })
         const result = await response.text();
-        q1Output.textContent = JSON.stringify(result, null, 2);
+        q1Output.textContent = result; //JSON.stringify(result, null, 2);
     } catch (error) {
         console.error(error);
     }

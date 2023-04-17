@@ -23,19 +23,29 @@ app.post('/data', async (req, res) => {
   try {
     const avgAge = await db.raw(query, [inputData]); // returns [object Object]
     console.log(avgAge);
-    // const avgAgeValue = avgAge[0]['avg(`Actor`.`Age`)']; // returns undefined
-    // console.log(avgAgeValue);
-    const outputData = `Processed data: ${avgAge}`;
+    const avgAgeString = JSON.stringify(avgAge);
+    const outputData = `Processed data: ${avgAgeString}`;
     res.send(outputData); //send as response
   } catch (error) {
     console.error(error);
     res.status(500).send('Internal Server Error'); // handle error response
   }
+});
 
-  // const avgAge = db.raw(query, [inputData]);
-  // const outputData = `Processed data: ${ db.raw(query, [inputData]) }`;
-  // res.send(outputData); //send as response
-  // res.send(outputData);
+app.post('/data', async (req, res) => {
+  const inputData = req.body.data; //data from the request body
+  //process the data (db code)
+  const query = 'SELECT avg(Actor.Age) FROM Movie JOIN ActsIn JOIN Actor ON Movie.MovieId = ActsIn.MovieId AND ActsIn.ActorId = Actor.ActorId WHERE Movie.Title = ?'
+  try {
+    const avgAge = await db.raw(query, [inputData]); // returns [object Object]
+    console.log(avgAge);
+    const avgAgeString = JSON.stringify(avgAge);
+    const outputData = `Processed data: ${avgAgeString}`;
+    res.send(outputData); //send as response
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Internal Server Error'); // handle error response
+  }
 });
 
 app.use('/', indexRouter);
