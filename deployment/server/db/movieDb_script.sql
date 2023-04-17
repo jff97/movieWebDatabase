@@ -123,9 +123,9 @@ INSERT INTO Movie (TicketsSold, Rating, Language, ReleaseDate, Title, Summary, S
 INSERT INTO Movie (TicketsSold, Rating, Language, ReleaseDate, Title, Summary, Seconds, Budget) VALUES (32052925, 'R', 'English', 1960/09/08, 
 'Psycho', 'A Phoenix secretary embezzles $40,000 from her employers client, goes on the run and checks into a remote motel run by a young man under the domination of his mother',
 6540, 806947);
---INSERT INTO Movie (TicketsSold, Rating, Language, ReleaseDate, Title, Summary, Seconds, Budget) VALUES (todoTickets, 'PG', 'English', 2023/04/05, 'The Super Mario Bros. Movie', 'The story of The Super Mario Bros. on their journey through the Mushroom Kingdom.', 5520, 100000000);
---INSERT INTO Movie (TicketsSold, Rating, Language, ReleaseDate, Title, Summary, Seconds, Budget) VALUES (todoTickets, 'PG13', 'English', 2014/08/01, 'Guardians of the Galaxy', 'A group of intergalactic criminals must pull together to stop a fanatical warrior with plans to purge the universe.', 7260, 170000000);
---INSERT INTO Movie (TicketsSold, Rating, Language, ReleaseDate, Title, Summary, Seconds, Budget) VALUES (todoTickets, 'PG13', 'English', 2017/12/20, 'Jumanji: Welcome to the Jungle', 'Four teenagers are sucked into a magical video game, and the only way they can escape is to work together to finish the game.', 7199, 90000000);
+INSERT INTO Movie (TicketsSold, Rating, Language, ReleaseDate, Title, Summary, Seconds, Budget) VALUES (677959700, 'PG', 'English', 2023/04/05, 'The Super Mario Bros. Movie', 'The story of The Super Mario Bros. on their journey through the Mushroom Kingdom.', 5520, 100000000);
+INSERT INTO Movie (TicketsSold, Rating, Language, ReleaseDate, Title, Summary, Seconds, Budget) VALUES (773350147, 'PG13', 'English', 2014/08/01, 'Guardians of the Galaxy', 'A group of intergalactic criminals must pull together to stop a fanatical warrior with plans to purge the universe.', 7260, 170000000);
+INSERT INTO Movie (TicketsSold, Rating, Language, ReleaseDate, Title, Summary, Seconds, Budget) VALUES (995339117, 'PG13', 'English', 2017/12/20, 'Jumanji: Welcome to the Jungle', 'Four teenagers are sucked into a magical video game, and the only way they can escape is to work together to finish the game.', 7199, 90000000);
 
 
 
@@ -135,12 +135,12 @@ INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Fincher', 'David'
 INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Gerwig', 'Greta', 1983/08/04);
 INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Peele', 'Jordan', 1979/02/21);
 INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Hitchcock', 'Alfred', 1899/08/13);
---INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Horvath', 'Aaron', 1980/08/19);
---INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Jelenic', 'Michael', 1977/05/12);
---INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Horvath', 'Aaron', 1980/08/19);
---INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Gunn', 'James', 1966/08/05);
---INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Kwan', 'Daniel', 1988/02/10);
---INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Kasdan', 'Jake', 1974/10/28);
+INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Horvath', 'Aaron', 1980/08/19);
+INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Jelenic', 'Michael', 1977/05/12);
+INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Horvath', 'Aaron', 1980/08/19);
+INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Gunn', 'James', 1966/08/05);
+INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Kwan', 'Daniel', 1988/02/10);
+INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Kasdan', 'Jake', 1974/10/28);
 
 
 --Award
@@ -177,14 +177,14 @@ INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('British'
 INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('Vietnamese', '51', 1971/08/20, 'Ke Huy', 'Quan');
 INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('American', '26', 1996/04/16, 'Anya', 'Taylor-Joy');
 INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('Australian', '22', 2000/07/26, 'Thomasin', 'McKenzie');
---INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('American', '43', 1979/06/21, 'Pratt', 'Chris');
---INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('Argentine', '26', 1996/04/16, 'Taylor-Joy', 'Anya');
---INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('American', '26', 1975/02/09, 'Day', 'Charlie');
---INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('American', '53', 1969/08/28, 'Black', 'Jack');
---INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('American', '53', 1969/01/18, 'Bautista', 'Dave');
---INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('American', '44', 1978/06/19, 'Saldana', 'Zoe');
---INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('Malaysian', '60', 1962/08/06, 'Yeoh', 'Michelle');
---INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('American', '50', 1972/05/02, 'Johnson', 'Dwayne');
+INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('American', '43', 1979/06/21, 'Pratt', 'Chris');
+INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('Argentine', '26', 1996/04/16, 'Taylor-Joy', 'Anya');
+INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('American', '26', 1975/02/09, 'Day', 'Charlie');
+INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('American', '53', 1969/08/28, 'Black', 'Jack');
+INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('American', '53', 1969/01/18, 'Bautista', 'Dave');
+INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('American', '44', 1978/06/19, 'Saldana', 'Zoe');
+INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('Malaysian', '60', 1962/08/06, 'Yeoh', 'Michelle');
+INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('American', '50', 1972/05/02, 'Johnson', 'Dwayne');
 
 
 --Entries--: Relationship Tables
@@ -197,47 +197,47 @@ INSERT INTO Wins (MovieId, AwardId, YearGiven) VALUES (1, 1, 2022);
 
 --Produces
 INSERT INTO Produces (MovieId, StudioId) VALUES (1, 1);
---INSERT INTO Produces (MovieId, StudioId) VALUES (4, 6);
---INSERT INTO Produces (MovieId, StudioId) VALUES (5, 3);
---INSERT INTO Produces (MovieId, StudioId) VALUES (2, 7);
---INSERT INTO Produces (MovieId, StudioId) VALUES (6, 8);
+INSERT INTO Produces (MovieId, StudioId) VALUES (4, 6);
+INSERT INTO Produces (MovieId, StudioId) VALUES (5, 3);
+INSERT INTO Produces (MovieId, StudioId) VALUES (2, 7);
+INSERT INTO Produces (MovieId, StudioId) VALUES (6, 8);
 
 --ActsIn
 INSERT INTO ActsIn (MovieId, ActorId) VALUES (1, 2);
---INSERT INTO ActsIn (MovieId, ActorId) VALUES (1, 11);
---INSERT INTO ActsIn (MovieId, ActorId) VALUES (4, 5);
---INSERT INTO ActsIn (MovieId, ActorId) VALUES (4, 6);
---INSERT INTO ActsIn (MovieId, ActorId) VALUES (4, 7);
---INSERT INTO ActsIn (MovieId, ActorId) VALUES (4, 8);
---INSERT INTO ActsIn (MovieId, ActorId) VALUES (5, 5);
---INSERT INTO ActsIn (MovieId, ActorId) VALUES (5, 9);
---INSERT INTO ActsIn (MovieId, ActorId) VALUES (5, 10);
---INSERT INTO ActsIn (MovieId, ActorId) VALUES (6, 12);
---INSERT INTO ActsIn (MovieId, ActorId) VALUES (6, 8);
+INSERT INTO ActsIn (MovieId, ActorId) VALUES (1, 11);
+INSERT INTO ActsIn (MovieId, ActorId) VALUES (4, 5);
+INSERT INTO ActsIn (MovieId, ActorId) VALUES (4, 6);
+INSERT INTO ActsIn (MovieId, ActorId) VALUES (4, 7);
+INSERT INTO ActsIn (MovieId, ActorId) VALUES (4, 8);
+INSERT INTO ActsIn (MovieId, ActorId) VALUES (5, 5);
+INSERT INTO ActsIn (MovieId, ActorId) VALUES (5, 9);
+INSERT INTO ActsIn (MovieId, ActorId) VALUES (5, 10);
+INSERT INTO ActsIn (MovieId, ActorId) VALUES (6, 12);
+INSERT INTO ActsIn (MovieId, ActorId) VALUES (6, 8);
 
 
 --Describes
 INSERT INTO Describes (MovieId, GenreId) VALUES (1, 7);
 INSERT INTO Describes (MovieId, GenreId) VALUES (2, 1);
 INSERT INTO Describes (MovieId, GenreId) VALUES (3, 1);
---INSERT INTO Describes (MovieId, GenreId) VALUES (4, 4);
---INSERT INTO Describes (MovieId, GenreId) VALUES (4, 7);
---INSERT INTO Describes (MovieId, GenreId) VALUES (4, 8);
---INSERT INTO Describes (MovieId, GenreId) VALUES (4, 9);
---INSERT INTO Describes (MovieId, GenreId) VALUES (4, 3);
---INSERT INTO Describes (MovieId, GenreId) VALUES (5, 2);
---INSERT INTO Describes (MovieId, GenreId) VALUES (5, 7);
---INSERT INTO Describes (MovieId, GenreId) VALUES (5, 10);
---INSERT INTO Describes (MovieId, GenreId) VALUES (5, 4);
---INSERT INTO Describes (MovieId, GenreId) VALUES (6, 2);
---INSERT INTO Describes (MovieId, GenreId) VALUES (6, 4);
---INSERT INTO Describes (MovieId, GenreId) VALUES (6, 6);
+INSERT INTO Describes (MovieId, GenreId) VALUES (4, 4);
+INSERT INTO Describes (MovieId, GenreId) VALUES (4, 7);
+INSERT INTO Describes (MovieId, GenreId) VALUES (4, 8);
+INSERT INTO Describes (MovieId, GenreId) VALUES (4, 9);
+INSERT INTO Describes (MovieId, GenreId) VALUES (4, 3);
+INSERT INTO Describes (MovieId, GenreId) VALUES (5, 2);
+INSERT INTO Describes (MovieId, GenreId) VALUES (5, 7);
+INSERT INTO Describes (MovieId, GenreId) VALUES (5, 10);
+INSERT INTO Describes (MovieId, GenreId) VALUES (5, 4);
+INSERT INTO Describes (MovieId, GenreId) VALUES (6, 2);
+INSERT INTO Describes (MovieId, GenreId) VALUES (6, 4);
+INSERT INTO Describes (MovieId, GenreId) VALUES (6, 6);
 
 --DirectedBy
 INSERT INTO DirectedBy (MovieId, DirId) VALUES (3, 5);
---INSERT INTO DirectedBy (MovieId, DirId) VALUES (4, 6);
---INSERT INTO DirectedBy (MovieId, DirId) VALUES (4, 7);
---INSERT INTO DirectedBy (MovieId, DirId) VALUES (4, 8);
---INSERT INTO DirectedBy (MovieId, DirId) VALUES (5, 9);
---INSERT INTO DirectedBy (MovieId, DirId) VALUES (1, 10);
---INSERT INTO DirectedBy (MovieId, DirId) VALUES (6, 11);
+INSERT INTO DirectedBy (MovieId, DirId) VALUES (4, 6);
+INSERT INTO DirectedBy (MovieId, DirId) VALUES (4, 7);
+INSERT INTO DirectedBy (MovieId, DirId) VALUES (4, 8);
+INSERT INTO DirectedBy (MovieId, DirId) VALUES (5, 9);
+INSERT INTO DirectedBy (MovieId, DirId) VALUES (1, 10);
+INSERT INTO DirectedBy (MovieId, DirId) VALUES (6, 11);
