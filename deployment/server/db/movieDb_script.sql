@@ -177,14 +177,14 @@ INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('British'
 INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('Vietnamese', '51', 1971/08/20, 'Ke Huy', 'Quan');
 INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('American', '26', 1996/04/16, 'Anya', 'Taylor-Joy');
 INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('Australian', '22', 2000/07/26, 'Thomasin', 'McKenzie');
-INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('American', '43', 1979/06/21, 'Pratt', 'Chris');
-INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('Argentine', '26', 1996/04/16, 'Taylor-Joy', 'Anya');
-INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('American', '26', 1975/02/09, 'Day', 'Charlie');
-INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('American', '53', 1969/08/28, 'Black', 'Jack');
-INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('American', '53', 1969/01/18, 'Bautista', 'Dave');
-INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('American', '44', 1978/06/19, 'Saldana', 'Zoe');
-INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('Malaysian', '60', 1962/08/06, 'Yeoh', 'Michelle');
-INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('American', '50', 1972/05/02, 'Johnson', 'Dwayne');
+INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('American', '43', 1979/06/21, 'Chris', 'Pratt');
+INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('American', '43', 1979/07/06, 'Kevin', 'Hart');
+INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('American', '26', 1975/02/09, 'Charlie', 'Day');
+INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('American', '53', 1969/08/28, 'Jack', 'Black');
+INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('American', '53', 1969/01/18, 'Dave', 'Bautista');
+INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('American', '44', 1978/06/19, 'Zoe', 'Saldana');
+INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('Malaysian', '60', 1962/08/06, 'Michelle', 'Yeoh');
+INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('American', '50', 1972/05/02, 'Dwayne', 'Johnson');
 
 
 --Entries--: Relationship Tables
@@ -206,7 +206,7 @@ INSERT INTO Produces (MovieId, StudioId) VALUES (6, 8);
 INSERT INTO ActsIn (MovieId, ActorId) VALUES (1, 2);
 INSERT INTO ActsIn (MovieId, ActorId) VALUES (1, 11);
 INSERT INTO ActsIn (MovieId, ActorId) VALUES (4, 5);
-INSERT INTO ActsIn (MovieId, ActorId) VALUES (4, 6);
+INSERT INTO ActsIn (MovieId, ActorId) VALUES (4, 3);
 INSERT INTO ActsIn (MovieId, ActorId) VALUES (4, 7);
 INSERT INTO ActsIn (MovieId, ActorId) VALUES (4, 8);
 INSERT INTO ActsIn (MovieId, ActorId) VALUES (5, 5);
@@ -214,6 +214,7 @@ INSERT INTO ActsIn (MovieId, ActorId) VALUES (5, 9);
 INSERT INTO ActsIn (MovieId, ActorId) VALUES (5, 10);
 INSERT INTO ActsIn (MovieId, ActorId) VALUES (6, 12);
 INSERT INTO ActsIn (MovieId, ActorId) VALUES (6, 8);
+INSERT INTO ActsIn (MovieId, ActorId) VALUES (6, 6);
 
 
 --Describes
