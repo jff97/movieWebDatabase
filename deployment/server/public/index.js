@@ -21,7 +21,7 @@ q1Button.addEventListener('click', async () => {
             }
         })
         const result = await response.text();
-        q1Output.textContent = result;
+        q1Output.textContent = JSON.stringify(result, null, 2);
     } catch (error) {
         console.error(error);
     }

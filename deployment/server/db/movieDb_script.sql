@@ -1,6 +1,6 @@
 /******************************************************
 * Movie Database Script
-* Version: 1.0
+* Version: 2.0
 * Description: This script creates the database and tables
 *              for a movie database application.
 * Author: Quinn McClure & John Fox

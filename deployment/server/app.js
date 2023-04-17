@@ -21,8 +21,10 @@ app.post('/data', async (req, res) => {
   //process the data (db code)
   const query = 'SELECT avg(Actor.Age) FROM Movie JOIN ActsIn JOIN Actor ON Movie.MovieId = ActsIn.MovieId AND ActsIn.ActorId = Actor.ActorId WHERE Movie.Title = ?'
   try {
-    const avgAge = await db.raw(query, [inputData]); // use await to handle asynchronous operation
-    const avgAgeValue = avgAge[0]['avg(`Actor`.`Age`)']; 
+    const avgAge = await db.raw(query, [inputData]); // returns [object Object]
+    console.log(avgAge);
+    // const avgAgeValue = avgAge[0]['avg(`Actor`.`Age`)']; // returns undefined
+    // console.log(avgAgeValue);
     const outputData = `Processed data: ${avgAge}`;
     res.send(outputData); //send as response
   } catch (error) {
