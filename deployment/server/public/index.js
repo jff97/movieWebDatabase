@@ -12,7 +12,7 @@ const q1Output = document.getElementById('q1Output');
 q1Button.addEventListener('click', async () => {
     const data = q1Input.value;
     try {
-        const response = await fetch('/data', {
+        const response = await fetch('/data1', {
             method: 'POST',
             body: JSON.stringify({ data }),
             headers: {
@@ -27,16 +27,16 @@ q1Button.addEventListener('click', async () => {
 });
 
 //code for Query 2
-const q2Button = document.getElementById('q1Button');
+const q2Button = document.getElementById('q2Button');
 const q2Year1Input = document.getElementById('q2Year1Input');
 const q2Year2Input = document.getElementById('q2Year2Input');
-const q2Output = document.getElementById('q1Output');
+const q2Output = document.getElementById('q2Output');
 
 q2Button.addEventListener('click', async () => {
     const data1 = q2Year1Input.value;
     const data2 = q2Year2Input.value;
     try {
-        const response = await fetch('/data', {
+        const response = await fetch('/data2', {
             method: 'POST',
             body: JSON.stringify({ data1, data2 }),
             headers: {
@@ -44,7 +44,7 @@ q2Button.addEventListener('click', async () => {
             }
         })
         const result = await response.text();
-        q1Output.textContent = result; //JSON.stringify(result, null, 2);
+        q2Output.textContent = result; //JSON.stringify(result, null, 2);
     } catch (error) {
         console.error(error);
     }

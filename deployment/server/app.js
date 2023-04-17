@@ -16,8 +16,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-//quey 1
-app.post('/data', async (req, res) => {
+//query 1
+app.post('/data1', async (req, res) => {
   const inputData = req.body.data; //data from the request body
   //process the data (db code)
   const query = 'SELECT avg(Actor.Age) FROM Movie JOIN ActsIn JOIN Actor ON Movie.MovieId = ActsIn.MovieId AND ActsIn.ActorId = Actor.ActorId WHERE Movie.Title = ?';
@@ -34,13 +34,15 @@ app.post('/data', async (req, res) => {
 });
 
 //query 2
-app.post('/data', async (req, res) => {
+app.post('/data2', async (req, res) => {
   const inputData1 = req.body.data1;
+  console.log(inputData1);
   const inputData2 = req.body.data2; //data from the request body
+  console.log(inputData2);
   //process the data (db code)
-  const query = '';
+  const query = 'SELECT Movie.Title FROM Movie WHERE ReleaseYear BETWEEN ? AND ? ORDER BY Movie.Title ASC';
   try {
-    const between = await db.raw(query, [inputData1], [inputData2]); // returns [object Object]
+    const between = await db.raw(query, [inputData1, inputData2]); // returns [object Object]
     console.log(between);
     const betweenString = JSON.stringify(between);
     const outputData = `Processed data: ${betweenString}`;
