@@ -7,4 +7,4 @@ SELECT avg(Actor.Age)
 FROM Movie JOIN ActsIn JOIN Actor 
 ON Movie.MovieId = ActsIn.MovieId AND 
    ActsIn.ActorId = Actor.ActorId 
-WHERE Movie.Title = x
+WHERE Movie.Title = ?
