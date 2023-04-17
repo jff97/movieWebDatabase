@@ -26,7 +26,7 @@ CREATE TABLE Movie (
     TicketsSold INTEGER NOT NULL,
     Rating NVARCHAR(5) NOT NULL,
     Language NVARCHAR(10) NOT NULL,
-    ReleaseDate DATE NOT NULL,
+    ReleaseYear INTEGER NOT NULL,
     Title TEXT NOT NULL,
     Summary Description NVARCHAR(255) NOT NULL,
     Seconds INTEGER NOT NULL,
@@ -112,20 +112,20 @@ CREATE TABLE DirectedBy (
 --Entries--: Regular Tables
 
 --Movies
-INSERT INTO Movie (TicketsSold, Rating, Language, ReleaseDate, Title, Summary, Seconds, Budget) VALUES (135728167, 'R', 'English', 2022/04/08, 
+INSERT INTO Movie (TicketsSold, Rating, Language, ReleaseYear, Title, Summary, Seconds, Budget) VALUES (135728167, 'R', 'English', 2022, 
 'Everything Everywhere All At Once', 'A middle-aged Chinese immigrant is swept up into an insane adventure in which she alone can save existence by exploring other universes and connecting with the lives she could have led.',
 8340, 14300000);
 
-INSERT INTO Movie (TicketsSold, Rating, Language, ReleaseDate, Title, Summary, Seconds, Budget) VALUES (22957625, 'R', 'English', 2021/10/29, 
+INSERT INTO Movie (TicketsSold, Rating, Language, ReleaseYear, Title, Summary, Seconds, Budget) VALUES (22957625, 'R', 'English', 2021, 
 'Last Night in Soho', 'A young fashion student who becomes mysteriously transported to the 1960s and befriends her idol, but soon discovers the dark and dangerous secrets of the past.',
 6960, 43000000);
 
-INSERT INTO Movie (TicketsSold, Rating, Language, ReleaseDate, Title, Summary, Seconds, Budget) VALUES (32052925, 'R', 'English', 1960/09/08, 
+INSERT INTO Movie (TicketsSold, Rating, Language, ReleaseYear, Title, Summary, Seconds, Budget) VALUES (32052925, 'R', 'English', 1960, 
 'Psycho', 'A Phoenix secretary embezzles $40,000 from her employers client, goes on the run and checks into a remote motel run by a young man under the domination of his mother',
 6540, 806947);
-INSERT INTO Movie (TicketsSold, Rating, Language, ReleaseDate, Title, Summary, Seconds, Budget) VALUES (677959700, 'PG', 'English', 2023/04/05, 'The Super Mario Bros. Movie', 'The story of The Super Mario Bros. on their journey through the Mushroom Kingdom.', 5520, 100000000);
-INSERT INTO Movie (TicketsSold, Rating, Language, ReleaseDate, Title, Summary, Seconds, Budget) VALUES (773350147, 'PG13', 'English', 2014/08/01, 'Guardians of the Galaxy', 'A group of intergalactic criminals must pull together to stop a fanatical warrior with plans to purge the universe.', 7260, 170000000);
-INSERT INTO Movie (TicketsSold, Rating, Language, ReleaseDate, Title, Summary, Seconds, Budget) VALUES (995339117, 'PG13', 'English', 2017/12/20, 'Jumanji: Welcome to the Jungle', 'Four teenagers are sucked into a magical video game, and the only way they can escape is to work together to finish the game.', 7199, 90000000);
+INSERT INTO Movie (TicketsSold, Rating, Language, ReleaseYear, Title, Summary, Seconds, Budget) VALUES (677959700, 'PG', 'English', 2023, 'The Super Mario Bros. Movie', 'The story of The Super Mario Bros. on their journey through the Mushroom Kingdom.', 5520, 100000000);
+INSERT INTO Movie (TicketsSold, Rating, Language, ReleaseYear, Title, Summary, Seconds, Budget) VALUES (773350147, 'PG13', 'English', 2014/08/01, 'Guardians of the Galaxy', 'A group of intergalactic criminals must pull together to stop a fanatical warrior with plans to purge the universe.', 7260, 170000000);
+INSERT INTO Movie (TicketsSold, Rating, Language, ReleaseYear, Title, Summary, Seconds, Budget) VALUES (995339117, 'PG13', 'English', 2017, 'Jumanji: Welcome to the Jungle', 'Four teenagers are sucked into a magical video game, and the only way they can escape is to work together to finish the game.', 7199, 90000000);
 
 
 
