@@ -16,10 +16,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+//quey 1
 app.post('/data', async (req, res) => {
   const inputData = req.body.data; //data from the request body
   //process the data (db code)
-  const query = 'SELECT avg(Actor.Age) FROM Movie JOIN ActsIn JOIN Actor ON Movie.MovieId = ActsIn.MovieId AND ActsIn.ActorId = Actor.ActorId WHERE Movie.Title = ?'
+  const query = 'SELECT avg(Actor.Age) FROM Movie JOIN ActsIn JOIN Actor ON Movie.MovieId = ActsIn.MovieId AND ActsIn.ActorId = Actor.ActorId WHERE Movie.Title = ?';
   try {
     const avgAge = await db.raw(query, [inputData]); // returns [object Object]
     console.log(avgAge);
@@ -32,15 +33,17 @@ app.post('/data', async (req, res) => {
   }
 });
 
+//query 2
 app.post('/data', async (req, res) => {
-  const inputData = req.body.data; //data from the request body
+  const inputData1 = req.body.data1;
+  const inputData2 = req.body.data2; //data from the request body
   //process the data (db code)
-  const query = 'SELECT avg(Actor.Age) FROM Movie JOIN ActsIn JOIN Actor ON Movie.MovieId = ActsIn.MovieId AND ActsIn.ActorId = Actor.ActorId WHERE Movie.Title = ?'
+  const query = '';
   try {
-    const avgAge = await db.raw(query, [inputData]); // returns [object Object]
-    console.log(avgAge);
-    const avgAgeString = JSON.stringify(avgAge);
-    const outputData = `Processed data: ${avgAgeString}`;
+    const between = await db.raw(query, [inputData1], [inputData2]); // returns [object Object]
+    console.log(between);
+    const betweenString = JSON.stringify(between);
+    const outputData = `Processed data: ${betweenString}`;
     res.send(outputData); //send as response
   } catch (error) {
     console.error(error);
