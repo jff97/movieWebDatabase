@@ -71,3 +71,27 @@ q3Button.addEventListener('click', async () => {
         console.error(error);
     }
 });
+
+//code for Query 4
+const q4Button = document.getElementById('q4Button');
+const q4StartInput = document.getElementById('q4StartInput');
+const q4EndInput = document.getElementById('q4EndInput');
+const q4Output = document.getElementById('q4Output');
+
+q4Button.addEventListener('click', async () => {
+    const data1 = q4StartInput.value;
+    const data2 = q4EndInput.value;
+    try {
+        const response = await fetch('/data2', {
+            method: 'POST',
+            body: JSON.stringify({ data1, data2 }),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        const result = await response.text();
+        q4Output.textContent = result; //JSON.stringify(result, null, 2);
+    } catch (error) {
+        console.error(error);
+    }
+});
