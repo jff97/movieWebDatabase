@@ -13,12 +13,16 @@
       <script src = "index.js" async ></script>
    </head>
    <body>
+      <!--Navbar-->
       <nav class="navbar bg-dark bg-body-tertiary" data-bs-theme = "dark">
          <div class="container-fluid">
            <span class="navbar-brand mb-0 h1">Movie Database by Quinn McClure and John Fox</span>
          </div>
       </nav>
+
       <div id="queryContainer">
+
+         <!--Query 1-->
          <div class="queryBox">
             <h3>
                Average age of actors in 
@@ -29,6 +33,8 @@
                Output Will go here
             </div>
          </div>
+
+         <!--Query 2-->
          <div class="queryBox">
             <h3>Movies between 
                <input type="text" id="q2Year1Input" placeholder="year 1"> 
@@ -41,16 +47,19 @@
             </div>
          </div>
 
+         <!--Query 3-->
          <div class="queryBox">
             <h3>
                Find all actors who acted in 
                <input type="text" id="q3Input" placeholder="production studio"> 
-               <button onclick="alert('js function that outputs query 3 results in purple box')">Run Query</button>
+               <button id = "q3Button" onclick="alert('js function that outputs query 3 results in purple box')">Run Query</button>
             </h3>
-            <div class="queryOutput" id = "prodStudioActorsQuery">
+            <div class="queryOutput" id = "q3Output">
                Output Will go here
             </div>
          </div>
+
+         <!--Query 4-->
          <div class="queryBox">
             <h3>find the top 
                <input type="text" id="q4StartInput" placeholder="Start Range">
@@ -64,6 +73,7 @@
             </div>
          </div>
 
+         <!--Query 5-->
          <div class="queryBox">
             <h3>
                Unwritten Query here
@@ -73,6 +83,8 @@
                Output Will go here
             </div>
          </div>
+
+         <!--Query 6-->
          <div class="queryBox">
             <h3>
                Find the names of the actors who have appeared in the most number of movies along with the count of movies they have acted in.
@@ -83,20 +95,5 @@
             </div>
          </div>
       </div>
-      <!-- <div class="input-group mb-3">
-         <input type="text" class="form-control" placeholder="Input a query" aria-label="Query" aria-describedby="button-addon2">
-         <button class="btn btn-outline-secondary" type="button" id="button-query" form = "Query" onclick=getQueryResult()>Button</button>
-      </div>
-      <div id = result>
-         hhh
-      </div> -->
-
-      <!-- <form id="myForm">
-         <input type="text" id="sqlInput" placeholder="Enter text">
-         <button type="submit" id="submitButton">Submit</button>
-       </form>
-       <p>Result:</p>
-       <br>
-       <div id="output"></div> -->
    </body>
 </html>

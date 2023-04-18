@@ -1,5 +1,5 @@
 find all actor that acted in movies of x production studio 
-this satifies group 2 requirement by joining 4 or more tables 
+this satisfies group 2 requirement by joining 4 or more tables 
 
 
 

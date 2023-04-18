@@ -53,6 +53,23 @@ app.post('/data2', async (req, res) => {
   }
 });
 
+//query 2
+app.post('/data3', async (req, res) => {
+  const inputData = req.body.data; //data from the request body
+  //process the data (db code)
+  const query = 'SELECT DISTINCT Actor.FirstName, Actor.LastName, Actor.DOB, Actor.Nationality FROM Actor JOIN ActsIn JOIN Movie JOIN Produces JOIN ProductionStudio ON Actor.ActorId = ActsIn.ActorId AND ActsIn.MovieId = Movie.MovieId AND Movie.MovieId = Produces.MovieId AND Produces.StudioId = ProductionStudio.StudioId WHERE ProductionStudio.StudioName = ?';
+  try {
+    const actsInProd = await db.raw(query, [inputData]); // returns [object Object]
+    console.log(actsInProd);
+    const actsInProdString = JSON.stringify(actsInProd);
+    const outputData = `Processed data: ${actsInProdString}`;
+    res.send(outputData); //send as response
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Internal Server Error'); // handle error response
+  }
+});
+
 app.use('/', indexRouter);
 
 // catch 404 and forward to error handler

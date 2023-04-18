@@ -49,3 +49,25 @@ q2Button.addEventListener('click', async () => {
         console.error(error);
     }
 });
+
+//code for Query 3
+const q3Button = document.getElementById('q3Button');
+const q3Input = document.getElementById('q3Input');
+const q3Output = document.getElementById('q3Output');
+
+q3Button.addEventListener('click', async () => {
+    const data = q3Input.value;
+    try {
+        const response = await fetch('/data3', {
+            method: 'POST',
+            body: JSON.stringify({ data }),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        const result = await response.text();
+        q3Output.textContent = result; //JSON.stringify(result, null, 2);
+    } catch (error) {
+        console.error(error);
+    }
+});
