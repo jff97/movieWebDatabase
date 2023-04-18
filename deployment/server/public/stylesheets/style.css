@@ -1,6 +1,7 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #3D550C;
 }
 
 a {
@@ -9,23 +10,25 @@ a {
 
 #output {
   outline: solid black 3px;
-  padding: 10px
+  padding: 10px;
 }
 .queryBox {
   width: 100%;
-  background-color: red;
+  background-color:#81B622;
   border: 2px solid blanchedalmond;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 .queryOutput {
   width: 90%;
   margin-left: 5%;
-  background-color: purple;
+  background-color: #ECF87F;
   /*TODO Delete this height attribute just for visualization*/
   height: 50vh;
 }
 
 .queryOutput {
-  color: white;
+  color: black;
+  font-family: 'Poppins', sans-serif;
 }
