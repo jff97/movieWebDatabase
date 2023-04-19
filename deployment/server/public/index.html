@@ -14,6 +14,8 @@
       <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
       <!--Stylesheet-->
       <link rel = "stylesheet" href = "stylesheets/style.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <script src="javascripts/jsonToTbl.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script src = "index.js" async ></script>
    </head>
@@ -31,11 +33,12 @@
          <div class="queryBox">
             <h3>
                Average age of actors in 
-               <input type="text" id="q1Input" placeholder="Movie Title">
-               <button id = "q1Button" onclick="alert('js function that outputs query 1 results in purple box')">Run Query</button>
+               <input type="text" id="q1Input" placeholder="Movie Title" value="The Super Mario Bros. Movie">
+               <button id = "q1Button">Run Query</button>
             </h3>
-            <div class="queryOutput" id = "q1Output">
-               Output Will go here
+            <div class="queryOutput">
+               <table id="query1Tbl" class="queryOutput">
+               </table>
             </div>
          </div>
 
@@ -45,10 +48,11 @@
                <input type="text" id="q2Year1Input" placeholder="year 1"> 
                and 
                <input type="text" id="q2Year2Input" placeholder="year 2"> 
-               <button id = "q2Button" onclick="alert('js function that outputs query 2 results in purple box')">Run Query</button>
+               <button id = "q2Button">Run Query</button>
             </h3>
-            <div class="queryOutput" id = "q2Output">
-               Output Will go here
+            <div class="queryOutput">
+               <table id="query2Tbl" class="queryOutput">
+               </table>
             </div>
          </div>
 
@@ -57,10 +61,11 @@
             <h3>
                Find all actors who acted in 
                <input type="text" id="q3Input" placeholder="production studio"> 
-               <button id = "q3Button" onclick="alert('js function that outputs query 3 results in purple box')">Run Query</button>
+               <button id = "q3Button">Run Query</button>
             </h3>
-            <div class="queryOutput" id = "q3Output">
-               Output Will go here
+            <div class="queryOutput">
+               <table id="query3Tbl" class="queryOutput">
+               </table>
             </div>
          </div>
 
@@ -71,10 +76,11 @@
                to 
                <input type="text" id="q4EndInput" placeholder="End range">
                most popular genres by ticket sales
-               <button id = "q4Button" onclick="alert('js function that outputs query 4 results in purple box')">Run Query</button>
+               <button id = "q4Button">Run Query</button>
             </h3>
-            <div class="queryOutput" id = "q4Output">
-               Output Will go here
+            <div class="queryOutput">
+               <table id="query4Tbl" class="queryOutput">
+               </table>
             </div>
          </div>
 
@@ -82,10 +88,11 @@
          <div class="queryBox">
             <h3>
                Unwritten Query here
-               <button onclick="alert('js function that outputs query 5 results in purple box')">Run Query</button>
+               <button>Run Query</button>
             </h3>
             <div class="queryOutput">
-               Output Will go here
+               <table id="query5Tbl" class="queryOutput">
+               </table>
             </div>
          </div>
 
@@ -93,10 +100,11 @@
          <div class="queryBox">
             <h3>
                Find the names of the actors who have appeared in the most number of movies along with the count of movies they have acted in.
-               <button onclick="alert('js function that outputs query 6 results in purple box')">Run Query</button>
+               <button>Run Query</button>
             </h3>
             <div class="queryOutput">
-               Output Will go here
+               <table id="query6Tbl" class="queryOutput">
+               </table>
             </div>
          </div>
       </div>
