@@ -8,5 +8,5 @@ ON Genre.GenreId = Describes.GenreId AND
    Movie.MovieId = Describes.MovieId
 GROUP BY Genre.GenreId
 ORDER BY TotalTicketSales DESC
-LIMIT 5 - 1
+LIMIT (5 - 1)
 OFFSET 1

@@ -82,7 +82,7 @@ q4Button.addEventListener('click', async () => {
     const data1 = q4StartInput.value;
     const data2 = q4EndInput.value;
     try {
-        const response = await fetch('/data2', {
+        const response = await fetch('/data4', {
             method: 'POST',
             body: JSON.stringify({ data1, data2 }),
             headers: {
