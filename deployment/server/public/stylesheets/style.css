@@ -25,7 +25,7 @@ a {
   margin-left: 5%;
   background-color: #ECF87F;
   /*TODO Delete this height attribute just for visualization*/
-  height: 50vh;
+  min-height: 30vh;
 }
 
 .queryOutput {

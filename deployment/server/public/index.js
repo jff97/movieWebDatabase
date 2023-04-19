@@ -20,7 +20,7 @@ q1Button.addEventListener('click', async () => {
             }
         })
         const result = await response.text();
-        q1Output.textContent = result; //JSON.stringify(result, null, 2);
+        buildHtmlTable(result, '#query1Tbl')
     } catch (error) {
         console.error(error);
     }
@@ -44,7 +44,7 @@ q2Button.addEventListener('click', async () => {
             }
         })
         const result = await response.text();
-        q2Output.textContent = result; //JSON.stringify(result, null, 2);
+        buildHtmlTable(result, '#query2Tbl')
     } catch (error) {
         console.error(error);
     }
@@ -66,7 +66,7 @@ q3Button.addEventListener('click', async () => {
             }
         })
         const result = await response.text();
-        q3Output.textContent = result; //JSON.stringify(result, null, 2);
+        buildHtmlTable(result, '#query3Tbl')
     } catch (error) {
         console.error(error);
     }
@@ -90,7 +90,7 @@ q4Button.addEventListener('click', async () => {
             }
         })
         const result = await response.text();
-        q4Output.textContent = result; //JSON.stringify(result, null, 2);
+        buildHtmlTable(result, '#query4Tbl')
     } catch (error) {
         console.error(error);
     }
