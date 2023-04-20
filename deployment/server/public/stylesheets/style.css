@@ -38,8 +38,14 @@ a {
 .modifyBox {
   background-color: blue;
   width: 90%;
-  height: 10vh;
+  min-height: 15vh;
   border: 2px solid black;
   margin-left: 5%;
   box-sizing: border-box;
+}
+.modifyBox input {
+  width: 25em;
+}
+.modifyOutput {
+  background-color: orange;
 }

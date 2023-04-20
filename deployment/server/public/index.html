@@ -16,6 +16,7 @@
       <link rel = "stylesheet" href = "stylesheets/style.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
       <script src="javascripts/jsonToTbl.js"></script>
+      <script src="javascripts/addUpdateDelete.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script src = "index.js" async ></script>
    </head>
@@ -112,13 +113,45 @@
          <div class="modifyBox">
             Add movie 
             <br>
-            <input type="text" id="ticketsSoldInput" placeholder="tickets sold ex:1432432">
+            <input type="text" id="ticketsSoldInput" placeholder="$Tickets sold ex: 1432432"><br>
+            <input type="text" id="ratingInput" placeholder="Rating ex: R"><br>
+            <input type="text" id="languageInput" placeholder="Language ex: English"><br>
+            <input type="text" id="releaseYearInput" placeholder="Release Year ex: 2014"><br>
+            <input type="text" id="titleInput" placeholder="Title ex: Tenet"><br>
+            <input type="text" id="summaryInput" placeholder="Summary ex: The story of The Super Mario Bros. on their journey through the Mushroom Kingdom."><br>
+            <input type="text" id="secondsInput" placeholder="Length seconds ex: 5950"><br>
+            <input type="text" id="budgetInput" placeholder="$Budget ex: 170000000"><br>
+            <button onclick="addMovie()">Add Movie</button>
+            <div id="addOutput" class="modifyOutput">
+               Status goes here
+            </div>
          </div>
          <div class="modifyBox">
-            Update Box
+            Update Actor
+            <br>
+            <strong>Search</strong>
+            <input type="text" id="firstNameSearch" placeholder="First Name">
+            <input type="text" id="lastNameSearch" placeholder="Last Name">
+            <br>
+            <br>
+            <strong>Update</strong><br>
+            <input type="text" id="firstNameInput" placeholder="First Name"><br>
+            <input type="text" id="lastNameInput" placeholder="Last Name"><br>
+            <input type="text" id="ageInput" placeholder="Age"><br>
+            <input type="text" id="nationalityInput" placeholder="Nationality"><br>
+            <button onclick="updateActor()">Update Actor</button>
+            <div id="updateOutput" class="modifyOutput">
+               Status goes here
+            </div>
          </div>
          <div class="modifyBox">
-            Delete Box
+            Delete Production Studio 
+            <br>
+            <input type="text" id="productionStudioInput" placeholder="Production Studio ex: Universal Pictures">
+            <button onclick="deleteProductionStudio()">Delete</button>
+            <div id="deleteOutput" class="modifyOutput">
+               Status goes here
+            </div>
          </div>
       </div>
    </body>
