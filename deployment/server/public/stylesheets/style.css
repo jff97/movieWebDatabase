@@ -8,10 +8,6 @@ a {
   color: #00B7FF;
 }
 
-#output {
-  outline: solid black 3px;
-  padding: 10px;
-}
 .queryBox {
   width: 100%;
   background-color:#81B622;

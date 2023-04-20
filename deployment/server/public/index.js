@@ -95,3 +95,29 @@ q4Button.addEventListener('click', async () => {
         console.error(error);
     }
 });
+
+//code for Query 5
+const q5Button = document.getElementById('q5Button');
+const q5StartInput = document.getElementById('q5StartInput');
+const q5EndInput = document.getElementById('q5EndInput');
+const q5Output = document.getElementById('q5Output');
+
+q4Button.addEventListener('click', async () => {
+    const data1 = q4StartInput.value;
+    const data2 = q4EndInput.value;
+    try {
+        const response = await fetch('/data5', {
+            method: 'POST',
+            body: JSON.stringify({ data1, data2 }),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        const result = await response.text();
+        buildHtmlTable(result, '#query5Tbl')
+    } catch (error) {
+        console.error(error);
+    }
+});
+
+//code for Query 6
