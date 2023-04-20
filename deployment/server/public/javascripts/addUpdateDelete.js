@@ -1,4 +1,7 @@
 function addMovie() {
+   //clear status box
+   document.getElementById("addOutput").innerHTML = "Status goes here"
+
    //get all the strings for the inputs
    var ticketsNum = parseInt(document.getElementById("ticketsSoldInput").value)
    var ratingString = document.getElementById("ratingInput").value
@@ -20,30 +23,37 @@ function addMovie() {
    ratingString = ratingString.toUpperCase()
    if (ratingString != "NC-17" && ratingString != "R" && ratingString != "PG-13" && ratingString != "PG" && ratingString != "G") {
       goodInputs = false
+      console.log("bad rating")
    }
    //languageString is only checked for empty
    if (isEmpty(languageString)) {
       goodInputs = false
+      console.log("bad language")
    }
    //check release year
    if (!isNum(releaseYearNum)) {
       goodInputs = false
+      console.log("bad release year")
    }
    //title string is only checked for empty
    if (isEmpty(titleString)) {
       goodInputs = false
+      console.log("bad title")
    }
    //summary string is only checked for empty
    if (isEmpty(summaryString)) {
       goodInputs = false
+      console.log("bad summary")
    }
    //check seconds string
    if (!isNum(secondsNum)) {
       goodInputs = false
+      console.log("bad seconds")
    }
    //check budget string
    if (!isNum(budgetNum)) {
       goodInputs = false
+      console.log("bad budget")
    }
 
    //check the status variable for any error found
@@ -57,13 +67,16 @@ function addMovie() {
    var successfull = triggerAdd(ticketsNum, ratingString, languageString, releaseYearNum, titleString, summaryString, secondsNum, budgetNum)
 
    if (successfull) {
-      document.getElementById("addStatus").innerHTML
+      document.getElementById("addOutput").innerHTML = "Movie was added successfully"
    } else {
-      document.getElementById("addStatus").innerHTML
+      document.getElementById("addOutput").innerHTML = "movie was not added successfully inputs were good though"
    }
 }
 
 function updateActor() {
+   //clear status box
+   document.getElementById("updateOutput").innerHTML = "Status goes here"
+
    //get the search terms
    var searchFirstString = document.getElementById("firstNameSearch").value
    var searchLastString = document.getElementById("lastNameSearch").value
@@ -102,24 +115,33 @@ function updateActor() {
 
    //update this variable based on query request
    var successfull = triggerUpdate(searchFirstString, searchLastString, firstUpdateString, lastUpdateString, ageUpdateString, nationalityUpdateString)
-
    if (successfull) {
-      document.getElementById("updateStatus").innerHTML
+      document.getElementById("updateOutput").innerHTML = "update ran successfully"
    } else {
-      document.getElementById("updateStatus").innerHTML
+      document.getElementById("updateOutput").innerHTML = "update failed"
    }
 }
 
 function deleteProductionStudio() {
+   //clear status box
+   document.getElementById("deleteOutput").innerHTML = "status goes here"
+
+   //get the value from the text box
    var studioString = document.getElementById("productionStudioInput").value
+
+   //check studio string for empty
+   if (isEmpty(studioString)) {
+      document.getElementById("deleteOutput").innerHTML = "Empty studio name try again"
+      return 0
+   }
 
    //update this variable based on query request
    var successfull = triggerDelete(studioString)
 
    if (successfull) {
-      document.getElementById("deleteStatus").innerHTML = "Production Studio named " + studioString + " was removed from the database"
+      document.getElementById("deleteOutput").innerHTML = "Production Studio named " + studioString + " was removed from the database"
    } else {
-      document.getElementById("deleteStatus").innerHTML = "Production Studio named " + studioString + " was not found in database no removal was done"
+      document.getElementById("deleteOutput").innerHTML = "Production Studio named " + studioString + " was not found in database no removal was done"
    }
 }
 
@@ -135,23 +157,26 @@ function isNum(testNum) {
 //internal helper predicate function
 function isEmpty(testString) {
    if (testString == "") {
-      return false
-   } else {
       return true
+   } else {
+      return false
    }
 }
 
 function triggerAdd(ticketsNum, ratingString, languageString, releaseYearNum, titleString, summaryString, secondsNum, budgetNum) {
    //quinn do the backend request stuff here
    //return true of false relating to if it was successfull
+   return false
 }
 
 function triggerUpdate(searchFirstString, searchLastString, firstUpdateString, lastUpdateString, ageUpdateString, nationalityUpdateString) {
    //quinn do the backend request stuff here
    //return true of false relating to if it was successfull
+   return false
 }
 
 function triggerDelete(studioString) {
    //quinn do the backend request stuff here
    //return true of false relating to if it was successfull
+   return false
 }
