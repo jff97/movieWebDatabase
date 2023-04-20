@@ -90,6 +90,25 @@ app.post('/data4', async (req, res) => {
   }
 });
 
+//query 5
+
+//query 6
+app.post('/data6', async (req, res) => {
+  const inputData = req.body.data; //data from the request body
+  //process the data (db code)
+  const query = 'SELECT Actor.FirstName, Actor.LastName, COUNT(*) AS MovieCount FROM Actor JOIN ActsIn  ON Actor.ActorId = ActsIn.ActorId GROUP BY Actor.ActorId HAVING COUNT(*) = ( SELECT MAX(MovieCount) FROM ( SELECT COUNT(*) AS MovieCount FROM ActsIn GROUP BY ActorID ))';
+  try {
+    const queryData = await db.raw(query); // returns [object Object]
+    console.log(queryData);
+    const queryDataString = JSON.stringify(queryData);
+    const outputData = `${queryDataString}`;
+    res.send(outputData); //send as response
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Internal Server Error'); // handle error response
+  }
+});
+
 app.use('/', indexRouter);
 
 // catch 404 and forward to error handler

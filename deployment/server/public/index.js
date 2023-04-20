@@ -97,27 +97,24 @@ q4Button.addEventListener('click', async () => {
 });
 
 //code for Query 5
-const q5Button = document.getElementById('q5Button');
-const q5StartInput = document.getElementById('q5StartInput');
-const q5EndInput = document.getElementById('q5EndInput');
-const q5Output = document.getElementById('q5Output');
 
-q4Button.addEventListener('click', async () => {
-    const data1 = q4StartInput.value;
-    const data2 = q4EndInput.value;
+//code for Query 6
+const q6Button = document.getElementById('q6Button');
+const q6Output = document.getElementById('q6Output');
+
+q6Button.addEventListener('click', async () => {
+    //const data = q6Input.value;
     try {
-        const response = await fetch('/data5', {
+        const response = await fetch('/data6', {
             method: 'POST',
-            body: JSON.stringify({ data1, data2 }),
+            //body: JSON.stringify({ data }),
             headers: {
                 'Content-Type': 'application/json'
             }
         })
         const result = await response.text();
-        buildHtmlTable(result, '#query5Tbl')
+        buildHtmlTable(result, '#query6Tbl')
     } catch (error) {
         console.error(error);
     }
 });
-
-//code for Query 6
