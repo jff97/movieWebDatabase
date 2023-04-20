@@ -32,3 +32,14 @@ a {
   color: black;
   font-family: 'Poppins', sans-serif;
 }
+#modifyContainer {
+  background-color: red;
+}
+.modifyBox {
+  background-color: blue;
+  width: 90%;
+  height: 10vh;
+  border: 2px solid black;
+  margin-left: 5%;
+  box-sizing: border-box;
+}
