@@ -63,10 +63,10 @@ function addMovie() {
       return 0
    }
 
-   //update successfull based on query request
-   var successfull = triggerAdd(ticketsNum, ratingString, languageString, releaseYearNum, titleString, summaryString, secondsNum, budgetNum)
+   //update successful based on query request
+   var successful = triggerAdd(ticketsNum, ratingString, languageString, releaseYearNum, titleString, summaryString, secondsNum, budgetNum)
 
-   if (successfull) {
+   if (successful) {
       document.getElementById("addOutput").innerHTML = "Movie was added successfully"
    } else {
       document.getElementById("addOutput").innerHTML = "movie was not added successfully inputs were good though"
@@ -114,7 +114,7 @@ function updateActor() {
    }
 
    //update this variable based on query request
-   var successfull = triggerUpdate(searchFirstString, searchLastString, firstUpdateString, lastUpdateString, ageUpdateString, nationalityUpdateString)
+   var successfull = triggerUpdate(searchFirstString, searchLastString, firstUpdateString, lastUpdateString, ageUpdateString, nationalityUpdateString);
    if (successfull) {
       document.getElementById("updateOutput").innerHTML = "update ran successfully"
    } else {
@@ -165,6 +165,38 @@ function isEmpty(testString) {
 
 function triggerAdd(ticketsNum, ratingString, languageString, releaseYearNum, titleString, summaryString, secondsNum, budgetNum) {
    //quinn do the backend request stuff here
+   const addMovieButton = document.getElementById('addMovieButton');
+   const addOutput = document.getElementById('addOutput');
+
+   addMovieButton.addEventListener('click', async () => {
+      const data1 = ticketsNum;
+      const data2 = ratingString;
+      const data3 = languageString;
+      const data4 = releaseYearNum;
+      const data5 = titleString;
+      const data6 = summaryString;
+      const data7 = secondsNum;
+      const data8 = budgetNum;
+      try {
+         const response = await fetch('/add', {
+               method: 'POST',
+               body: JSON.stringify({ data1, data2, data3, data4, data5, data6, data7, data8 }),
+               headers: {
+                  'Content-Type': 'application/json'
+               }
+         })
+         const result = await response.text();
+
+         console.log(result);
+         addOutput.innerHTML = result;
+         return true;
+      } catch (error) {
+         console.error(error);
+         return false;
+      }
+   });
+
+
    //return true of false relating to if it was successfull
    return false
 }

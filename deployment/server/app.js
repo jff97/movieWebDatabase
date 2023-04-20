@@ -91,6 +91,41 @@ app.post('/data4', async (req, res) => {
   }
 });
 
+//add movie
+app.post('/add', async (req, res) => {
+
+  const inputData1 = req.body.data1;
+  console.log(inputData1);
+  const inputData2 = req.body.data2;
+  console.log(inputData2);
+  const inputData3 = req.body.data3;
+  console.log(inputData3);
+  const inputData4 = req.body.data4;
+  console.log(inputData4);
+  const inputData5 = req.body.data5;
+  console.log(inputData5);
+  const inputData6 = req.body.data6;
+  console.log(inputData6);
+  const inputData7 = req.body.data7;
+  console.log(inputData7);
+  const inputData8 = req.body.data8;
+  console.log(inputData8);
+
+
+  //process the data (db code)
+  const query = 'INSERT INTO Movie (TicketsSold, Rating, Language, ReleaseYear, Title, Summary, Seconds, Budget) VALUES (?, ?, ?, ?, ?, ?, ?, ?);';
+  try {
+    const add = await db.raw(query, [inputData1, inputData2, inputData3, inputData4, inputData5, inputData6, inputData7, inputData8]); // returns [object Object]
+    console.log(add);
+    const addString = JSON.stringify(add);
+    const outputData = 'successful';
+    res.send(outputData); //send as response
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Internal Server Error'); // handle error response
+  }
+});
+
 app.use('/', indexRouter);
 
 // catch 404 and forward to error handler
