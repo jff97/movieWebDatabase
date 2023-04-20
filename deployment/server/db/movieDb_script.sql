@@ -130,17 +130,17 @@ INSERT INTO Movie (TicketsSold, Rating, Language, ReleaseYear, Title, Summary, S
 
 
 --Director
-INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Nolan', 'Christopher', 1970/07/30);
-INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Fincher', 'David', 1962/08/28);
-INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Gerwig', 'Greta', 1983/08/04);
-INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Peele', 'Jordan', 1979/02/21);
-INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Hitchcock', 'Alfred', 1899/08/13);
-INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Horvath', 'Aaron', 1980/08/19);
-INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Jelenic', 'Michael', 1977/05/12);
-INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Horvath', 'Aaron', 1980/08/19);
-INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Gunn', 'James', 1966/08/05);
-INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Kwan', 'Daniel', 1988/02/10);
-INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Kasdan', 'Jake', 1974/10/28);
+INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Nolan', 'Christopher', 1970-07-30);
+INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Fincher', 'David', 1962-08-28);
+INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Gerwig', 'Greta', 1983-08-04);
+INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Peele', 'Jordan', 1979-02-21);
+INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Hitchcock', 'Alfred', 1899-08-13);
+INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Horvath', 'Aaron', 1980-08-19);
+INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Jelenic', 'Michael', 1977-05-12);
+INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Horvath', 'Aaron', 1980-08-19);
+INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Gunn', 'James', 1966-08-05);
+INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Kwan', 'Daniel', 1988-02-10);
+INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Kasdan', 'Jake', 1974-10-28);
 
 
 --Award
@@ -173,18 +173,18 @@ INSERT INTO Genre (GenreName) VALUES ('Superhero');
 
 
 --Actor
-INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('British', '49', 1974/01/30, 'Christian', 'Bale');
-INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('Vietnamese', '51', 1971/08/20, 'Ke Huy', 'Quan');
-INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('American', '26', 1996/04/16, 'Anya', 'Taylor-Joy');
-INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('Australian', '22', 2000/07/26, 'Thomasin', 'McKenzie');
-INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('American', '43', 1979/06/21, 'Chris', 'Pratt');
-INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('American', '43', 1979/07/06, 'Kevin', 'Hart');
-INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('American', '26', 1975/02/09, 'Charlie', 'Day');
-INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('American', '53', 1969/08/28, 'Jack', 'Black');
-INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('American', '53', 1969/01/18, 'Dave', 'Bautista');
-INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('American', '44', 1978/06/19, 'Zoe', 'Saldana');
-INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('Malaysian', '60', 1962/08/06, 'Michelle', 'Yeoh');
-INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('American', '50', 1972/05/02, 'Dwayne', 'Johnson');
+INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('British', '49', 1974-01-30, 'Christian', 'Bale');
+INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('Vietnamese', '51', 1971-08-20, 'Ke Huy', 'Quan');
+INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('American', '26', 1996-04-16, 'Anya', 'Taylor-Joy');
+INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('Australian', '22', 2000-07-26, 'Thomasin', 'McKenzie');
+INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('American', '43', 1979-06-21, 'Chris', 'Pratt');
+INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('American', '43', 1979-07-06, 'Kevin', 'Hart');
+INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('American', '26', 1975-02-09, 'Charlie', 'Day');
+INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('American', '53', 1969-08-28, 'Jack', 'Black');
+INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('American', '53', 1969-01-18, 'Dave', 'Bautista');
+INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('American', '44', 1978-06-19, 'Zoe', 'Saldana');
+INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('Malaysian', '60', 1962-08-06, 'Michelle', 'Yeoh');
+INSERT INTO Actor (Nationality, Age, DOB, FirstName, LastName) VALUES ('American', '50', 1972-05-02, 'Dwayne', 'Johnson');
 
 
 --Entries--: Relationship Tables
