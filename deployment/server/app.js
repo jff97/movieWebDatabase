@@ -77,7 +77,6 @@ app.post('/data4', async (req, res) => {
   const inputData2 = req.body.data2; //data from the request body
   console.log(inputData2);
   //process the data (db code)
-  //TODO - fix the question marks in this query
   const query = 'SELECT GenreName, SUM(TicketsSold) AS TotalTicketSales FROM Genre JOIN Describes JOIN Movie ON Genre.GenreId = Describes.GenreId AND Movie.MovieId = Describes.MovieId GROUP BY Genre.GenreId ORDER BY TotalTicketSales DESC LIMIT (? - ?) OFFSET ?';
   try {
     const offset = await db.raw(query, [inputData2, inputData1, inputData1]); // returns [object Object]

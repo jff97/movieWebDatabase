@@ -95,3 +95,26 @@ q4Button.addEventListener('click', async () => {
         console.error(error);
     }
 });
+
+//code for Query 5
+
+//code for Query 6
+const q6Button = document.getElementById('q6Button');
+const q6Output = document.getElementById('q6Output');
+
+q6Button.addEventListener('click', async () => {
+    //const data = q6Input.value;
+    try {
+        const response = await fetch('/data6', {
+            method: 'POST',
+            //body: JSON.stringify({ data }),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        const result = await response.text();
+        buildHtmlTable(result, '#query6Tbl')
+    } catch (error) {
+        console.error(error);
+    }
+});
