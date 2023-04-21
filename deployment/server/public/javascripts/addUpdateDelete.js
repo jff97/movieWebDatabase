@@ -163,12 +163,12 @@ function isEmpty(testString) {
    }
 }
 
-function triggerAdd(ticketsNum, ratingString, languageString, releaseYearNum, titleString, summaryString, secondsNum, budgetNum) {
+async function triggerAdd(ticketsNum, ratingString, languageString, releaseYearNum, titleString, summaryString, secondsNum, budgetNum) {
    //quinn do the backend request stuff here
    const addMovieButton = document.getElementById('addMovieButton');
    const addOutput = document.getElementById('addOutput');
 
-   addMovieButton.addEventListener('click', async () => {
+   //addMovieButton.addEventListener('click', async () => {
       const data1 = ticketsNum;
       const data2 = ratingString;
       const data3 = languageString;
@@ -194,7 +194,7 @@ function triggerAdd(ticketsNum, ratingString, languageString, releaseYearNum, ti
          console.error(error);
          return false;
       }
-   });
+   //});
 
 
    //return true of false relating to if it was successfull
