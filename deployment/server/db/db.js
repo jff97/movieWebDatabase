@@ -3,7 +3,7 @@ const knex = require('knex');
 const db = knex({
     client: 'sqlite3',
     connection: {
-        filename: './db/movieV4.db'//add file path to the .db file here
+        filename: './db/editedVersion.db'//add file path to the .db file here
     },
     useNullAsDefault: true
 });
