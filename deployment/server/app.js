@@ -126,6 +126,12 @@ app.post('/add', async (req, res) => {
   }
 });
 
+//update
+
+//delete
+
+//clear
+
 app.use('/', indexRouter);
 
 // catch 404 and forward to error handler

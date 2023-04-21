@@ -212,3 +212,9 @@ function triggerDelete(studioString) {
    //return true of false relating to if it was successfull
    return false
 }
+
+function triggerClear() {
+   //quinn do the backend request stuff here
+   //return true of false relating to if it was successfull
+   return false
+}
