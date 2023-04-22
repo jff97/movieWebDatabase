@@ -203,8 +203,7 @@ async function triggerAdd(ticketsNum, ratingString, languageString, releaseYearN
 
 async function triggerUpdate(searchFirstString, searchLastString, firstUpdateString, lastUpdateString, ageUpdateString, nationalityUpdateString) {
    //quinn do the backend request stuff here
-   const addMovieButton = document.getElementById('addMovieButton');
-   const addOutput = document.getElementById('addOutput');
+   const addOutput = document.getElementById('updateOutput');
 
    //addMovieButton.addEventListener('click', async () => {
       const data1 = searchFirstString;
@@ -238,6 +237,29 @@ async function triggerUpdate(searchFirstString, searchLastString, firstUpdateStr
 
 async function triggerDelete(studioString) {
    //quinn do the backend request stuff here
+   const addOutput = document.getElementById('deleteOutput');
+
+   //addMovieButton.addEventListener('click', async () => {
+      const data1 = studioString;
+      
+      try {
+         const response = await fetch('/delete', {
+               method: 'POST',
+               body: JSON.stringify({ data1 }),
+               headers: {
+                  'Content-Type': 'application/json'
+               }
+         })
+         const result = await response.text();
+         console.log(result);
+         addOutput.innerHTML = result;
+         return true;
+      } catch (error) {
+         console.error(error);
+         return false;
+      }
+   //});
+
    //return true of false relating to if it was successfull
    return false
 }

@@ -179,6 +179,24 @@ app.post('/update', async (req, res) => {
 });
 
 //delete
+app.post('/delete', async (req, res) => {
+
+  const inputData1 = req.body.data1;
+  console.log(inputData1);
+
+  //process the data (db code)
+  const query = 'DELETE FROM ProductionStudio WHERE StudioName = ?';
+  try {
+    const destroy = await db.raw(query, [inputData1]);
+    console.log(destroy);
+    const destroyString = JSON.stringify(destroy);
+    const outputData = 'successful';
+    res.send(outputData); //send as response
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Internal Server Error'); // handle error response
+  }
+});
 
 //clear
 
