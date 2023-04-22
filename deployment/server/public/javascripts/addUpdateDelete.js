@@ -201,19 +201,48 @@ async function triggerAdd(ticketsNum, ratingString, languageString, releaseYearN
    return false
 }
 
-function triggerUpdate(searchFirstString, searchLastString, firstUpdateString, lastUpdateString, ageUpdateString, nationalityUpdateString) {
+async function triggerUpdate(searchFirstString, searchLastString, firstUpdateString, lastUpdateString, ageUpdateString, nationalityUpdateString) {
+   //quinn do the backend request stuff here
+   const addMovieButton = document.getElementById('addMovieButton');
+   const addOutput = document.getElementById('addOutput');
+
+   //addMovieButton.addEventListener('click', async () => {
+      const data1 = searchFirstString;
+      const data2 = searchLastString;
+      const data3 = firstUpdateString;
+      const data4 = lastUpdateString;
+      const data5 = ageUpdateString;
+      const data6 = nationalityUpdateString;
+      
+      try {
+         const response = await fetch('/update', {
+               method: 'POST',
+               body: JSON.stringify({ data1, data2, data3, data4, data5, data6 }),
+               headers: {
+                  'Content-Type': 'application/json'
+               }
+         })
+         const result = await response.text();
+         console.log(result);
+         addOutput.innerHTML = result;
+         return true;
+      } catch (error) {
+         console.error(error);
+         return false;
+      }
+   //});
+
+   //return true of false relating to if it was successfull
+   return false
+}
+
+async function triggerDelete(studioString) {
    //quinn do the backend request stuff here
    //return true of false relating to if it was successfull
    return false
 }
 
-function triggerDelete(studioString) {
-   //quinn do the backend request stuff here
-   //return true of false relating to if it was successfull
-   return false
-}
-
-function triggerClear() {
+async function triggerClear() {
    //quinn do the backend request stuff here
    //return true of false relating to if it was successfull
    return false

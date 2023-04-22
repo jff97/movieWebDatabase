@@ -145,6 +145,38 @@ app.post('/add', async (req, res) => {
 });
 
 //update
+app.post('/update', async (req, res) => {
+
+  const inputData1 = req.body.data1;
+  console.log(inputData1);
+  const inputData2 = req.body.data2;
+  console.log(inputData2);
+  const inputData3 = req.body.data3;
+  console.log(inputData3);
+  const inputData4 = req.body.data4;
+  console.log(inputData4);
+  const inputData5 = req.body.data5;
+  console.log(inputData5);
+  const inputData6 = req.body.data6;
+  console.log(inputData6);
+
+  //process the data (db code)
+  const searchQuery = 'SELECT FirstName, LastName FROM Actor WHERE FirstName = ? AND LastName = ?';
+  const updateQuery = 'UPDATE Actor SET Nationality = ?, Age = ?, FirstName = ?, LastName = ?';
+  try {
+    const search = await db.raw(searchQuery, [inputData1, inputData2]);
+    const update = await db.raw(updateQuery, [inputData6, inputData5, inputData3, inputData4]);
+    console.log(update);
+    console.log(search);
+    const searchString = JSON.stringify(search);
+    const updateString = JSON.stringify(update);
+    const outputData = 'successful';
+    res.send(outputData); //send as response
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Internal Server Error'); // handle error response
+  }
+});
 
 //delete
 
