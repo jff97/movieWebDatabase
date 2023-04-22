@@ -29,20 +29,23 @@ a {
   font-family: 'Poppins', sans-serif;
 }
 #modifyContainer {
-  background-color: red;
+  /* background-color: red; */
+  background-color:#81B622;
 }
 .modifyBox {
-  background-color: blue;
+  /* background-color: blue; */
+  background-color: #ECF87F;
   width: 90%;
   min-height: 15vh;
-  border: 2px solid black;
+  /* border: 2px solid black; */
+  border: 2px solid blanchedalmond;
   margin-left: 5%;
   box-sizing: border-box;
-  color: white
+  color: black
 }
 .modifyBox input {
   width: 25em;
 }
 .modifyOutput {
-  background-color: orange;
+  background-color: white;
 }
