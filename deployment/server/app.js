@@ -109,6 +109,57 @@ app.post('/data6', async (req, res) => {
   }
 });
 
+//query 7
+app.post('/data7', async (req, res) => {
+  const inputData = req.body.data; //data from the request body
+  //process the data (db code)
+  const query = 'SELECT * FROM Movie';
+  try {
+    const queryData = await db.raw(query); // returns [object Object]
+    console.log(queryData);
+    const queryDataString = JSON.stringify(queryData);
+    const outputData = `${queryDataString}`;
+    res.send(outputData); //send as response
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Internal Server Error'); // handle error response
+  }
+});
+
+//query 8
+app.post('/data8', async (req, res) => {
+  const inputData = req.body.data; //data from the request body
+  //process the data (db code)
+  const query = 'SELECT * FROM Actor';
+  try {
+    const queryData = await db.raw(query); // returns [object Object]
+    console.log(queryData);
+    const queryDataString = JSON.stringify(queryData);
+    const outputData = `${queryDataString}`;
+    res.send(outputData); //send as response
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Internal Server Error'); // handle error response
+  }
+});
+
+//query 9
+app.post('/data9', async (req, res) => {
+  const inputData = req.body.data; //data from the request body
+  //process the data (db code)
+  const query = 'SELECT * FROM ProductionStudio';
+  try {
+    const queryData = await db.raw(query); // returns [object Object]
+    console.log(queryData);
+    const queryDataString = JSON.stringify(queryData);
+    const outputData = `${queryDataString}`;
+    res.send(outputData); //send as response
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Internal Server Error'); // handle error response
+  }
+});
+
 //add movie
 app.post('/add', async (req, res) => {
 

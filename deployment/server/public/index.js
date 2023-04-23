@@ -118,3 +118,63 @@ q6Button.addEventListener('click', async () => {
         console.error(error);
     }
 });
+
+//code for Query 7
+const q7Button = document.getElementById('q7Button');
+const q7Output = document.getElementById('q7Output');
+
+q7Button.addEventListener('click', async () => {
+    try {
+        const response = await fetch('/data7', {
+            method: 'POST',
+            //body: JSON.stringify({ data }),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        const result = await response.text();
+        buildHtmlTable(result, '#query7Tbl')
+    } catch (error) {
+        console.error(error);
+    }
+});
+
+//code for Query 8
+const q8Button = document.getElementById('q8Button');
+const q8Output = document.getElementById('q8Output');
+
+q8Button.addEventListener('click', async () => {
+    try {
+        const response = await fetch('/data8', {
+            method: 'POST',
+            //body: JSON.stringify({ data }),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        const result = await response.text();
+        buildHtmlTable(result, '#query8Tbl')
+    } catch (error) {
+        console.error(error);
+    }
+});
+
+//code for Query 9
+const q9Button = document.getElementById('q9Button');
+const q9Output = document.getElementById('q9Output');
+
+q9Button.addEventListener('click', async () => {
+    try {
+        const response = await fetch('/data9', {
+            method: 'POST',
+            //body: JSON.stringify({ data }),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        const result = await response.text();
+        buildHtmlTable(result, '#query9Tbl')
+    } catch (error) {
+        console.error(error);
+    }
+});
