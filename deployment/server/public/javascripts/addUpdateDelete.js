@@ -145,6 +145,10 @@ function deleteProductionStudio() {
    }
 }
 
+function clearChanges() {
+   
+}
+
 //internal helper predicate function
 function isNum(testNum) {
    if (testNum == NaN) {
