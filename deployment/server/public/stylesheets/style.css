@@ -32,16 +32,24 @@ a {
   /* background-color: red; */
   background-color:#81B622;
 }
+
+.modifyInputs {
+  background-color: #ECF87F;
+  border: 2px solid blanchedalmond;
+  font-family: 'Poppins', sans-serif;
+}
+
 .modifyBox {
   /* background-color: blue; */
-  background-color: #ECF87F;
+  background-color: #81B622;
   width: 90%;
   min-height: 15vh;
   /* border: 2px solid black; */
   border: 2px solid blanchedalmond;
   margin-left: 5%;
   box-sizing: border-box;
-  color: black
+  color: black;
+  font-family: 'Poppins', sans-serif;
 }
 .modifyBox input {
   width: 25em;
