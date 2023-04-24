@@ -1,0 +1,19 @@
+find actors that appear in both x production company and x prod code
+
+satisfies group 3 by using intersection operator
+
+SELECT Actor.FirstName, Actor.LastName
+    FROM Actor JOIN ActsIn JOIN Movie JOIN Produces JOIN ProductionStudio
+        ON Actor.ActorID = ActsIn.ActorID
+            AND ActsIn.MovieID = Movie.MovieID
+            AND Movie.MovieID = Produces.MovieID
+            AND Produces.StudioID = ProductionStudio.StudioId
+    WHERE ProductionStudio.StudioName = x
+INTERSECT
+SELECT Actor.FirstName, Actor.LastName
+    FROM Actor JOIN ActsIn JOIN Movie JOIN Produces JOIN ProductionStudio
+        ON Actor.ActorID = ActsIn.ActorID
+            AND ActsIn.MovieID = Movie.MovieID
+            AND Movie.MovieID = Produces.MovieID
+            AND Produces.StudioID = ProductionStudio.StudioId
+    WHERE ProductionStudio.StudioName = x
