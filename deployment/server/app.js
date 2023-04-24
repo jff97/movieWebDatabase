@@ -212,15 +212,11 @@ app.post('/update', async (req, res) => {
   console.log(inputData6);
 
   //process the data (db code)
-  const searchQuery = 'SELECT FirstName, LastName FROM Actor WHERE FirstName = ? AND LastName = ?';
-  const updateQuery = 'UPDATE Actor SET Nationality = ?, Age = ?, FirstName = ?, LastName = ?';
+  const searchQuery = 'UPDATE Actor SET Nationality = ?, Age = ?, FirstName = ?, LastName = ? WHERE FirstName = ? AND LastName = ?';
   try {
-    const search = await db.raw(searchQuery, [inputData1, inputData2]);
-    const update = await db.raw(updateQuery, [inputData6, inputData5, inputData3, inputData4]);
-    console.log(update);
+    const search = await db.raw(searchQuery, [inputData6, inputData5, inputData3, inputData4, inputData1, inputData2]);
     console.log(search);
     const searchString = JSON.stringify(search);
-    const updateString = JSON.stringify(update);
     const outputData = 'successful';
     res.send(outputData); //send as response
   } catch (error) {
