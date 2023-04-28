@@ -123,9 +123,21 @@ INSERT INTO Movie (TicketsSold, Rating, Language, ReleaseYear, Title, Summary, S
 INSERT INTO Movie (TicketsSold, Rating, Language, ReleaseYear, Title, Summary, Seconds, Budget) VALUES (32052925, 'R', 'English', 1960, 
 'Psycho', 'A Phoenix secretary embezzles $40,000 from her employers client, goes on the run and checks into a remote motel run by a young man under the domination of his mother',
 6540, 806947);
+
 INSERT INTO Movie (TicketsSold, Rating, Language, ReleaseYear, Title, Summary, Seconds, Budget) VALUES (677959700, 'PG', 'English', 2023, 'The Super Mario Bros. Movie', 'The story of The Super Mario Bros. on their journey through the Mushroom Kingdom.', 5520, 100000000);
+
 INSERT INTO Movie (TicketsSold, Rating, Language, ReleaseYear, Title, Summary, Seconds, Budget) VALUES (773350147, 'PG13', 'English', 2014, 'Guardians of the Galaxy', 'A group of intergalactic criminals must pull together to stop a fanatical warrior with plans to purge the universe.', 7260, 170000000);
+
 INSERT INTO Movie (TicketsSold, Rating, Language, ReleaseYear, Title, Summary, Seconds, Budget) VALUES (995339117, 'PG13', 'English', 2017, 'Jumanji: Welcome to the Jungle', 'Four teenagers are sucked into a magical video game, and the only way they can escape is to work together to finish the game.', 7199, 90000000);
+
+INSERT INTO Movie (TicketsSold, Rating, Language, ReleaseYear, Title, Summary, Seconds, Budget) VALUES (171235592, 'R', 'English', 2022, 'Nope', 'The residents of a lonely gulch in inland California bear witness to an uncanny and chilling discovery.', 7800, 68000000);
+
+INSERT INTO Movie (TicketsSold, Rating, Language, ReleaseYear, Title, Summary, Seconds, Budget) VALUES (255745157, 'R', 'English', 2017, 'Get Out', 'A young African-American visits his White girlfriends parents for the weekend, where his simmering uneasiness about their reception of him eventually reaches a boiling point.', 6240, 4500000);
+
+INSERT INTO Movie (TicketsSold, Rating, Language, ReleaseYear, Title, Summary, Seconds, Budget) VALUES (256067149, 'R', 'English', 2019, 'Us', 'A familys serene beach vacation turns to chaos when their doppelgängers appear and begin to terrorize them.', 6960, 20000000);
+
+INSERT INTO Movie (TicketsSold, Rating, Language, ReleaseYear, Title, Summary, Seconds, Budget) VALUES (0, 'PG13', 'English', 2022, 'Wendell & Wild', 'Two scheming demon brothers, Wendell and Wild, enlist the aid of 13-year-old Kat Elliot to summon them to the Land of the Living.', 6300, 0);
+
 
 
 
@@ -242,3 +254,7 @@ INSERT INTO DirectedBy (MovieId, DirId) VALUES (4, 8);
 INSERT INTO DirectedBy (MovieId, DirId) VALUES (5, 9);
 INSERT INTO DirectedBy (MovieId, DirId) VALUES (1, 10);
 INSERT INTO DirectedBy (MovieId, DirId) VALUES (6, 11);
+INSERT INTO DirectedBy (MovieId, DirId) VALUES (7, 4);
+INSERT INTO DirectedBy (MovieId, DirId) VALUES (8, 4);
+INSERT INTO DirectedBy (MovieId, DirId) VALUES (9, 4);
+INSERT INTO DirectedBy (MovieId, DirId) VALUES (10, 4);

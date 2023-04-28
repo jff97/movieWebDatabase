@@ -91,6 +91,24 @@ app.post('/data4', async (req, res) => {
 });
 
 //query 5
+app.post('/data5', async (req, res) => {
+  const inputData1 = req.body.data1;
+  console.log(inputData1);
+  const inputData2 = req.body.data2; //data from the request body
+  console.log(inputData2);
+  //process the data (db code)
+  const query = '';
+  try {
+    const offset = await db.raw(query, [inputData1, inputData2]); // returns [object Object]
+    console.log(offset);
+    const offsetString = JSON.stringify(offset);
+    const outputData = `${offsetString}`;
+    res.send(outputData); //send as response
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Internal Server Error'); // handle error response
+  }
+});
 
 //query 6
 app.post('/data6', async (req, res) => {

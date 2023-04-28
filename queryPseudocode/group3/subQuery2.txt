@@ -1,0 +1,4 @@
+Write a query that returns the average budget of all movies by a specified director
+
+SELECT Director.DirFirstName, avg(Movie.Budget)
+    FROM 
