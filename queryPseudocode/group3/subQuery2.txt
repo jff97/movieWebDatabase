@@ -1,4 +1,1 @@
-Write a query that returns the average budget of all movies by a specified director
-
-SELECT Director.DirFirstName, avg(Movie.Budget)
-    FROM 
+List the average budget and name of the directors that have directed the top 5 highest grossing movies
