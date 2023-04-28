@@ -1,1 +1,4 @@
-List the average budget and name of the directors that have directed the top 5 highest grossing movies
+List the average budget of all movies directed by the directors that directed the top 5 highest grossing movies
+
+Find directors of the top five grossing movies
+Find the average budget of all movies these directors directed
