@@ -1,4 +1,19 @@
 List the average budget of all movies directed by the directors that directed the top 5 highest grossing movies
 
 Find directors of the top five grossing movies
+SELECT Director.DirFirstName, Director.DirLastName, Movie.Title
+    FROM Director JOIN DirectedBy JOIN Movie
+        ON Director.DirId = DirectedBy.DirId 
+            AND DirectedBy.MovieId = Movie.MovieId
+    ORDER BY Movie.TicketsSold REVERSE
+    LIMIT 5
+    
+
 Find the average budget of all movies these directors directed
+SELECT avg()
+    FROM (SELECT Director.DirFirstName, Director.DirLastName, Movie.Title
+    FROM Director JOIN DirectedBy JOIN Movie
+        ON Director.DirId = DirectedBy.DirId 
+            AND DirectedBy.MovieId = Movie.MovieId
+    ORDER BY Movie.TicketsSold REVERSE
+    LIMIT 5)

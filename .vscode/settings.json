@@ -3,5 +3,25 @@
         "Anya",
         "AUTOINCREMENT",
         "Quan"
+    ],
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "Chinook Mini",
+            "database": "/Users/quinnmcclure/Desktop/Databases/Chinook/Chinook.db"
+        },
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "Chinook Pro",
+            "database": "/Users/quinnmcclure/Desktop/Databases/Chinook/Chinook.db"
+        },
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "Movie",
+            "database": "${workspaceFolder:movieWebDatabase}/deployment/server/db/movieV7.db"
+        }
     ]
 }
