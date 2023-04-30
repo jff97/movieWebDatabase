@@ -10,10 +10,26 @@ SELECT Director.DirFirstName, Director.DirLastName, Movie.Title
     
 
 Find the average budget of all movies these directors directed
-SELECT avg()
-    FROM (SELECT Director.DirFirstName, Director.DirLastName, Movie.Title
+SELECT avg(Movie.Budget)
+    FROM (SELECT Director.DirFirstName, Director.DirLastName, Movie.Title, Movie.Budget
     FROM Director JOIN DirectedBy JOIN Movie
         ON Director.DirId = DirectedBy.DirId 
             AND DirectedBy.MovieId = Movie.MovieId
     ORDER BY Movie.TicketsSold REVERSE
     LIMIT 5)
+
+
+----in progress
+SELECT Movie.Title, AVG(Movie.Budget) AS averageBudget, Director.DirFirstName, Director.DirLastName
+FROM Movie
+JOIN DirectedBy ON Movie.MovieId = DirectedBy.MovieId
+JOIN Director ON DirectedBy.DirId = Director.DirId
+JOIN (
+    SELECT DirId, SUM(TicketsSold) AS totalTicketsSold
+    FROM DirectedBy
+    JOIN Movie ON DirectedBy.MovieId = Movie.MovieId
+    GROUP BY DirId
+    ORDER BY totalTicketsSold DESC
+    LIMIT 5
+) AS topDirectors ON Director.DirId = topDirectors.DirId
+GROUP BY Director.DirFirstName, Director.DirLastName;
