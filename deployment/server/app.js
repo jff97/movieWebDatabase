@@ -97,7 +97,7 @@ app.post('/data5', async (req, res) => {
   const inputData2 = req.body.data2; //data from the request body
   console.log(inputData2);
   //process the data (db code)
-  const query = '';
+  const query = 'SELECT Director.DirFirstName AS FirstName, Director.DirLastName AS LastName, avg(Movie.Budget) as averageBudget FROM Director JOIN DirectedBy JOIN Movie ON Director.DirId = DirectedBy.DirId AND DirectedBy.MovieId = Movie.MovieId WHERE (FirstName, LastName) IN (SELECT DISTINCT Director.DirFirstName, Director.DirLastName FROM Director JOIN DirectedBy JOIN Movie ON Director.DirId = DirectedBy.DirId AND DirectedBy.MovieId = Movie.MovieId GROUP BY Director.DirFirstName, Director.DirLastName ORDER BY Movie.TicketsSold DESC LIMIT 5) GROUP BY FirstName, LastName ORDER BY averageBudget DESC';
   try {
     const grossing = await db.raw(query); // returns [object Object]
     console.log(grossing);

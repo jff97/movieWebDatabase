@@ -104,7 +104,7 @@ q5Button.addEventListener('click', async () => {
     try {
         const response = await fetch('/data5', {
             method: 'POST',
-            body: JSON.stringify({ data1, data2 }),
+            //body: JSON.stringify({ data1, data2 }),
             headers: {
                 'Content-Type': 'application/json'
             }
