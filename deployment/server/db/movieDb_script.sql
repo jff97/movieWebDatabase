@@ -138,8 +138,9 @@ INSERT INTO Movie (TicketsSold, Rating, Language, ReleaseYear, Title, Summary, S
 
 INSERT INTO Movie (TicketsSold, Rating, Language, ReleaseYear, Title, Summary, Seconds, Budget) VALUES (0, 'PG13', 'English', 2022, 'Wendell & Wild', 'Two scheming demon brothers, Wendell and Wild, enlist the aid of 13-year-old Kat Elliot to summon them to the Land of the Living.', 6300, 0);
 
+INSERT INTO Movie (TicketsSold, Rating, Language, ReleaseYear, Title, Summary, Seconds, Budget) VALUES (863756051, 'PG13', 'English', 2017, 'Guardians of the Galaxy: Vol 2', 'The Guardians struggle to keep together as a team while dealing with their personal family issues, notably Star-Lords encounter with his father the ambitious celestial being Ego.', 6900, 200000000);
 
-
+INSERT INTO Movie (TicketsSold, Rating, Language, ReleaseYear, Title, Summary, Seconds, Budget) VALUES (52090236, 'PG', 'English', 2018, 'Teen Titans GO! To the Movies', 'A villains maniacal plan for world domination sidetracks five teenage superheroes who dream of Hollywood stardom.', 6239, 10000000);
 
 --Director
 INSERT INTO Director (DirLastName, DirFirstName, DOB) VALUES ('Nolan', 'Christopher', "1970-07-30");
@@ -258,3 +259,5 @@ INSERT INTO DirectedBy (MovieId, DirId) VALUES (7, 4);
 INSERT INTO DirectedBy (MovieId, DirId) VALUES (8, 4);
 INSERT INTO DirectedBy (MovieId, DirId) VALUES (9, 4);
 INSERT INTO DirectedBy (MovieId, DirId) VALUES (10, 4);
+INSERT INTO DirectedBy (MovieId, DirId) VALUES (11, 9);
+INSERT INTO DirectedBy (MovieId, DirId) VALUES (12, 6);
