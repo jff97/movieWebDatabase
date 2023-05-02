@@ -98,13 +98,9 @@ q4Button.addEventListener('click', async () => {
 
 //code for Query 5
 const q5Button = document.getElementById('q5Button');
-const q5InputFirst = document.getElementById('q5InputFirst');
-const q5InputLast = document.getElementById('q5InputLast');
 const q5Output = document.getElementById('q5Output');
 
 q5Button.addEventListener('click', async () => {
-    const data1 = q5InputFirst.value;
-    const data2 = q5InputLast.value;
     try {
         const response = await fetch('/data5', {
             method: 'POST',

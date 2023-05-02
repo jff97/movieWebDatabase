@@ -21,10 +21,7 @@ SELECT avg(Movie.Budget)
 
 ----in progress
 SELECT Movie.Title, AVG(Movie.Budget) AS averageBudget, Director.DirFirstName, Director.DirLastName
-FROM Movie
-JOIN DirectedBy ON Movie.MovieId = DirectedBy.MovieId
-JOIN Director ON DirectedBy.DirId = Director.DirId
-JOIN (
+    FROM (
     SELECT DirId, SUM(TicketsSold) AS totalTicketsSold
     FROM DirectedBy
     JOIN Movie ON DirectedBy.MovieId = Movie.MovieId

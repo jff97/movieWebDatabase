@@ -99,10 +99,10 @@ app.post('/data5', async (req, res) => {
   //process the data (db code)
   const query = '';
   try {
-    const offset = await db.raw(query, [inputData1, inputData2]); // returns [object Object]
-    console.log(offset);
-    const offsetString = JSON.stringify(offset);
-    const outputData = `${offsetString}`;
+    const grossing = await db.raw(query); // returns [object Object]
+    console.log(grossing);
+    const grossingString = JSON.stringify(grossing);
+    const outputData = `${grossingString}`;
     res.send(outputData); //send as response
   } catch (error) {
     console.error(error);
